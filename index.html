@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>衛藤 泰地｜Taichi Eto</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 1em;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 2em;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+    }
+    h1, h2 {
+      color: #006d77;
+    }
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 0.5em;
+    }
+    h2 {
+      font-size: 1.2em;
+      margin-top: 1.5em;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    li {
+      margin-bottom: 0.5em;
+    }
+    .note {
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 1.5em;
+    }
+    .lang-toggle {
+      text-align: right;
+      margin-bottom: 1em;
+    }
+    button {
+      padding: 0.5em 1em;
+      border: none;
+      background-color: #006d77;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+      h2 {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="lang-toggle">
+      <button onclick="toggleLang()">Switch Language</button>
+    </div>
+
+    <div id="ja">
+      <h1>衛藤 泰地｜Taichi Eto</h1>
+      <p>N高等学校卒業（2020年）<br>東京都市大学 環境学部 環境経営システム学科（2022年入学｜2026年卒業予定）<br>東京都市大学 大学院 情報データ科学研究科 進学予定</p>
+
+      <h2>研究内容</h2>
+      <p>経営と環境の両立をテーマに、システムダイナミクスやAI（VAE、強化学習など）を活用した経営シミュレーションの研究を行う。</p>
+
+      <h2>実務・インターン経験</h2>
+      <ul>
+        <li><strong>株式会社Ridge-i（AIエンジニア）</strong>：VAEによる異常検知モデル開発、北海道大学との共同研究</li>
+        <li><strong>株式会社ネクスウェイ（TISインテックグループ｜広報インターン）</strong>：広報記事執筆、RubyKaigi 2023での英語事業説明、動画編集等</li>
+        <li><strong>株式会社10tan（制作・業務支援インターン）</strong>：コーポレートサイト制作支援、Slack Bot開発、インターン生マネジメント</li>
+      </ul>
+
+      <h2>学生団体活動</h2>
+      <ul>
+        <li><strong>学園祭実行委員会（広報部・Web制作チームリーダー）</strong>：公式サイトの設計・制作を主導。「マイ・トレジャー展」は副業的に個人で企画・実行</li>
+        <li><strong>環境経営システム学科学生会 会長（2023年11月〜2025年3月）</strong>：OB招致イベントの開催や「Hashi-Watashi Project（合格祈願箸の製作・配布）」を主催し、学科内外の交流とSDGs推進に貢献</li>
+      </ul>
+
+      <h2>受賞歴</h2>
+      <ul>
+        <li><strong>異能vation 2018 ノミネート</strong>：墓石に貼付したQRコードから故人の情報を閲覧できるアプリのアイデアが評価されてノミネート</li>
+      </ul>
+
+      <h2>スキル</h2>
+      <ul>
+        <li>Python（PyTorch, Optuna, NumPy）、JavaScript、HTML/CSS</li>
+        <li>AI技術：VAE、異常検知、強化学習（DQN, PPO）、ベイズ推定</li>
+        <li>医療画像処理（DICOM形式の画像を用いた経験あり）</li>
+        <li>モデリング：Vensim、システムダイナミクス、KPI設計</li>
+        <li>TOEIC 780｜QUT（オーストラリア）にてセメスター留学（ビジネスコース）</li>
+      </ul>
+
+      <h2>人物像</h2>
+      <p>小中学生時代に不登校を経験。高校から独学を始め、大学へ進学。「逆境を力に変える」ことをテーマに、テクノロジーと戦略を武器に社会課題へ挑む。</p>
+    </div>
+
+    <div id="en" style="display:none;">
+      <h1>Taichi Eto</h1>
+      <p>Graduated from N High School (2020)<br>Tokyo City University, Department of Environmental Management Systems (Enrolled 2022 – Expected Graduation 2026)<br>Planning to enroll in the Graduate School of Information and Data Science</p>
+
+      <h2>Research</h2>
+      <p>Studying sustainable business strategy through system dynamics and AI (VAE, reinforcement learning, etc.).</p>
+
+      <h2>Work & Internship Experience</h2>
+      <ul>
+        <li><strong>Ridge-i Inc. (AI Engineer Intern)</strong>: Developed anomaly detection models with VAE, joint research with Hokkaido University</li>
+        <li><strong>Nexway Co., Ltd. (TIS INTEC Group｜Communications Intern)</strong>: Authored articles, pitched in English at RubyKaigi 2023, edited videos</li>
+        <li><strong>10tan Inc. (Creative/Operations Intern)</strong>: Supported corporate site, developed Slack Bot, coordinated interns</li>
+      </ul>
+
+      <h2>Student Leadership</h2>
+      <ul>
+        <li><strong>University Festival Committee (PR Dept. / Website Team Lead)</strong>: Led official website design & operations. Organized "My Treasure Exhibition" independently as a passion project</li>
+        <li><strong>President, Dept. of Environmental Management Student Council (Nov 2023 – Mar 2025)</strong>: Hosted OB networking events and led the "Hashi-Watashi Project," producing and distributing lucky chopsticks from sustainably harvested bamboo</li>
+      </ul>
+
+      <h2>Awards</h2>
+      <ul>
+        <li><strong>Inno-vation Program Nominee (2018)</strong>: Nominated for proposing an app that allows users to access the life story of the deceased by scanning a QR code on a gravestone</li>
+      </ul>
+
+      <h2>Skills</h2>
+      <ul>
+        <li>Python (PyTorch, Optuna, NumPy), JavaScript, HTML/CSS</li>
+        <li>AI: VAE, anomaly detection, reinforcement learning (DQN, PPO), Bayesian inference</li>
+        <li>Medical imaging (DICOM format experience)</li>
+        <li>Modeling: Vensim, system dynamics, KPI design</li>
+        <li>TOEIC 780 | Semester exchange at QUT (Business course)</li>
+      </ul>
+
+      <h2>About Me</h2>
+      <p>Formerly a long-term absentee in elementary and junior high school. Studied independently from high school and advanced to university. Passionate about turning adversity into strength to solve societal issues through technology and strategy.</p>
+    </div>
+
+    <p class="note">※言語はボタンで切り替え可能です。スマートフォンでも閲覧対応済み。</p>
+  </div>
+
+  <script>
+    function toggleLang() {
+      const ja = document.getElementById('ja');
+      const en = document.getElementById('en');
+      if (ja.style.display === 'none') {
+        ja.style.display = 'block';
+        en.style.display = 'none';
+      } else {
+        ja.style.display = 'none';
+        en.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
