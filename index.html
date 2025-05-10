@@ -6,120 +6,329 @@
   <title>衛藤 泰地｜Taichi Eto</title>
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="icon" href="favicon.ico">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
     <div class="lang-toggle">
-      <button onclick="toggleLang()">Switch Language</button>
+      <button onclick="toggleLang()" class="lang-btn">
+        <i class="fas fa-globe"></i> Switch Language
+      </button>
     </div>
 
-    <div id="ja">
-      <h1>衛藤 泰地｜Taichi Eto</h1>
-      <p>N高等学校(通学コース) 卒業</p>
-      <p>東京都市大学 環境学部 環境経営システム学科（2022年入学｜2026年卒業予定）<br>東京都市大学 大学院 情報データ科学研究科 進学希望</p>
-      <p>
-        <a href="https://www.linkedin.com/in/taichieto/" target="_blank" style="color: #006d77;">LinkedIn</a> | 
-        <a href="https://www.wantedly.com/id/taichi_eto" target="_blank" style="color: #006d77;">Wantedly</a> | 
-        <a href="https://x.com/iTachiTaichi" target="_blank" style="color: #006d77;">X (Twitter)</a> | 
-        <a href="https://note.com/itachitaichi" target="_blank" style="color: #006d77;">note</a> | 
-        <a href="https://instagram.com/taichi.jpg" target="_blank" style="color: #006d77;">Instagram</a>
-      </p>
+    <div id="ja" class="content-section">
+      <div class="profile-header" data-aos="fade-down">
+        <h1>衛藤 泰地｜Taichi Eto</h1>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/taichieto/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.wantedly.com/id/taichi_eto" target="_blank" class="social-icon"><i class="fas fa-briefcase"></i></a>
+          <a href="https://x.com/iTachiTaichi" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://note.com/itachitaichi" target="_blank" class="social-icon"><i class="fas fa-pen"></i></a>
+          <a href="https://instagram.com/taichi.jpg" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
 
-      <h2>研究内容</h2>
-      <p>経営と環境の両立をテーマに、システムダイナミクスやAI（VAE、強化学習など）を活用した経営シミュレーションの研究を行う。</p>
+      <div class="education" data-aos="fade-up">
+        <div class="education-timeline">
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-content">
+              <h3>N高等学校（通学コース）</h3>
+              <p class="education-period">2017年4月 - 2020年4月</p>
+              <p class="education-description">高校卒業</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="education-content">
+              <h3>東京都市大学 環境学部</h3>
+              <p class="education-subtitle">環境経営システム学科</p>
+              <p class="education-period">2022年4月 - 2026年3月（予定）</p>
+              <p class="education-description">在学中</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <div class="education-content">
+              <h3>東京都市大学 大学院</h3>
+              <p class="education-subtitle">情報データ科学研究科</p>
+              <p class="education-description">進学希望</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <h2>実務・インターン経験</h2>
-      <ul>
-        <li><strong><a href="https://ridge-i.com/" target="_blank" style="color: #006d77;">株式会社Ridge-i</a>（パートタイム 深層学習エンジニア）</strong>：VAEによる異常検知モデル開発、某国立大学との共同研究</li>
-        <li><strong><a href="https://www.nexway.co.jp/" target="_blank" style="color: #006d77;">株式会社ネクスウェイ</a>（TISインテックグループ｜広報インターン）</strong>：広報記事執筆、RubyKaigi 2023での英語事業説明、動画編集等</li>
-        <li><strong><a href="https://10tan.co.jp/" target="_blank" style="color: #006d77;">株式会社10tan</a>（制作・業務支援インターン）</strong>：コーポレートサイト制作支援、Slack Bot開発、インターン生マネジメント</li>
-        <li><strong><a href="https://newcreator.org/" target="_blank" style="color: #006d77;">特定非営利活動法人 ニュークリエイター・オルグ</a></strong>: 教育格差是正に向けた活動。ワークショップの開催に向け、企画とクラウドファンディング実施に携わる → 30万円調達。</li>
-        <li><strong><a href="https://tcu.ac.jp" target="_blank" style="color: #006d77;">東京都市大学 社会メディア学科</a> (基礎プログラミング演習 | SA・学生アシスタント業務)</strong>: HTML/CSS/JavaScriptを用いて、文系学生向けのプログラミング授業のアシスタント業務に従事しました</li>
-      </ul>
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-flask"></i> 研究内容</h2>
+        <p>経営と環境の両立をテーマに、システムダイナミクスやAI（VAE、強化学習など）を活用した経営シミュレーションの研究を行う。</p>
+      </section>
 
-      <h2>学生団体活動</h2>
-      <ul>
-        <li><strong><a href="https://yokohama-fest.net/" target="_blank" style="color: #006d77;">学園祭実行委員会</a> 広報部（Web制作チームリーダー）</strong>：公式サイトの設計・制作を主導。「マイ・トレジャー展」は副業的に個人で企画・実行</li>
-        <li><strong><a href="https://toshidai-ems.net/" target="_blank" style="color: #006d77;">環境経営システム学科学生会</a> 会長（2023年11月〜2025年3月）</strong>：OB招致イベントの開催や「Hashi-Watashi Project（合格祈願箸の製作・配布）」を主催し、学科内外の交流とSDGs推進に貢献</li>
-        <li><strong><a href="https://gdg.community.dev/gdg-on-campus-tokyo-city-university-tokyo-japan/" target="_blank" style="color: #006d77;">Google Developer Groups on Campus Tokyo City University </a> Core Member</strong></li>
-      </ul>
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-briefcase"></i> 実務・インターン経験</h2>
+        <ul class="experience-list">
+          <li class="experience-item">
+            <strong><a href="https://ridge-i.com/" target="_blank">株式会社Ridge-i</a>（パートタイム 深層学習エンジニア）</strong>
+            <p class="experience-period">2024年8月 - 2025年2月28日</p>
+            <p>VAEによる異常検知モデル開発、某国立大学との共同研究</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://10tan.co.jp/" target="_blank">株式会社10tan</a>（制作・業務支援インターン）</strong>
+            <p class="experience-period">2023年9月 - 2024年2月</p>
+            <p>コーポレートサイト制作支援、Slack Bot開発、インターン生マネジメント</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://www.nexway.co.jp/" target="_blank">株式会社ネクスウェイ</a>（TISインテックグループ｜広報インターン）</strong>
+            <p class="experience-period">2022年8月 - 2023年9月</p>
+            <p>広報記事執筆、RubyKaigi 2023での英語事業説明、動画編集等</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://newcreator.org/" target="_blank">特定非営利活動法人 ニュークリエイター・オルグ</a></strong>
+            <p class="experience-period">2022年6月 - 現在</p>
+            <p>教育格差是正に向けた活動。ワークショップの開催に向け、企画とクラウドファンディング実施に携わる → 30万円調達。</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://tcu.ac.jp" target="_blank">東京都市大学 社会メディア学科</a> (基礎プログラミング演習 | SA・学生アシスタント業務)</strong>
+            <p>HTML/CSS/JavaScriptを用いて、文系学生向けのプログラミング授業のアシスタント業務に従事しました</p>
+          </li>
+        </ul>
+      </section>
 
-      <h2>受賞歴</h2>
-      <ul>
-        <li><strong>異能vation 2018 ノミネート</strong>: 墓石に貼付したQRコードから故人の情報を閲覧できるアプリのアイデアが評価されてノミネート</li>
-        <li><strong>株式会社10tan コアバリュー賞</strong>: 「仕事は与えられるものではなく、自分で創るものである。しかし、それはただ闇雲に何かをすればよいと言うわけではない。「WHY」をしっかりと考えた上で何が必要か、何をすべきかを自分で考え、行動 に移すことが重要である。」に該当</li>
-      </ul>
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-users"></i> 学生団体活動</h2>
+        <ul class="activity-list">
+          <li class="activity-item">
+            <strong><a href="https://yokohama-fest.net/" target="_blank">学園祭実行委員会</a> 広報部（Web制作チームリーダー）</strong>
+            <p>公式サイトの設計・制作を主導。「マイ・トレジャー展」は副業的に個人で企画・実行</p>
+          </li>
+          <li class="activity-item">
+            <strong><a href="https://toshidai-ems.net/" target="_blank">環境経営システム学科学生会</a> 会長</strong>
+            <p class="experience-period">2023年11月 - 2025年3月</p>
+            <p>OB招致イベントの開催や「Hashi-Watashi Project（合格祈願箸の製作・配布）」を主催し、学科内外の交流とSDGs推進に貢献</p>
+          </li>
+          <li class="activity-item">
+            <strong><a href="https://gdg.community.dev/gdg-on-campus-tokyo-city-university-tokyo-japan/" target="_blank">Google Developer Groups on Campus Tokyo City University</a> Core Member</strong>
+          </li>
+        </ul>
+      </section>
 
-      <h2>スキル</h2>
-      <ul>
-        <li>Python（PyTorch, Optuna, NumPy）、JavaScript、HTML/CSS</li>
-        <li>AI技術：VAE、異常検知、強化学習（DQN, PPO）、ベイズ推定</li>
-        <li>医療画像処理（DICOM形式の画像を用いた経験あり）</li>
-        <li>モデリング：Vensim、システムダイナミクス, BDCraft Cubik</li>
-        <li>TOEIC 780｜QUT（オーストラリア）にてセメスター留学（ビジネスコース）</li>
-      </ul>
-      <h2>その他</h2>
-      <ul>
-        <li><strong><a href="https://minecraft.jp/events/99" target="_blank" style="color: #006d77;">Minecraft(Java版)カスタムサーバーを運営 | 日本12位</a></strong></li>
-      </ul>
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-trophy"></i> 受賞歴</h2>
+        <ul class="awards-list">
+          <li class="award-item">
+            <strong>異能vation 2018 ノミネート</strong>
+            <p>墓石に貼付したQRコードから故人の情報を閲覧できるアプリのアイデアが評価されてノミネート</p>
+          </li>
+          <li class="award-item">
+            <strong>株式会社10tan コアバリュー賞</strong>
+            <p>「仕事は与えられるものではなく、自分で創るものである。しかし、それはただ闇雲に何かをすればよいと言うわけではない。「WHY」をしっかりと考えた上で何が必要か、何をすべきかを自分で考え、行動に移すことが重要である。」に該当</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-code"></i> スキル</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>プログラミング言語</h3>
+            <p>Python（PyTorch, Optuna, NumPy）、JavaScript、HTML/CSS</p>
+          </div>
+          <div class="skill-category">
+            <h3>AI技術</h3>
+            <p>VAE、異常検知、強化学習（DQN, PPO）、ベイズ推定</p>
+          </div>
+          <div class="skill-category">
+            <h3>専門スキル</h3>
+            <p>医療画像処理（DICOM形式の画像を用いた経験あり）</p>
+          </div>
+          <div class="skill-category">
+            <h3>モデリング</h3>
+            <p>Vensim、システムダイナミクス, BDCraft Cubik</p>
+          </div>
+          <div class="skill-category">
+            <h3>語学・留学</h3>
+            <p>TOEIC 780｜QUT（オーストラリア）にてセメスター留学（ビジネスコース）</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-gamepad"></i> その他</h2>
+        <ul class="others-list">
+          <li class="other-item">
+            <strong><a href="https://minecraft.jp/events/99" target="_blank">Minecraft(Java版)カスタムサーバーを運営 | 日本12位</a></strong>
+          </li>
+        </ul>
+      </section>
     </div>
 
-    <div id="en" style="display:none;">
-      <h1>Taichi Eto</h1>
-      <p>Graduated from N High School (2020)<br>Tokyo City University, Department of Environmental Management Systems (Enrolled 2022 – Expected Graduation 2026)<br>Planning to enroll in the Graduate School of Information and Data Science</p>
-      
-      <p>
-        <a href="https://www.linkedin.com/in/taichieto/" target="_blank" style="color: #006d77;">LinkedIn</a> | 
-        <a href="https://www.wantedly.com/id/taichi_eto" target="_blank" style="color: #006d77;">Wantedly Profile</a> | 
-        <a href="https://x.com/iTachiTaichi" target="_blank" style="color: #006d77;">X (Twitter)</a> | 
-        <a href="https://note.com/itachitaichi" target="_blank" style="color: #006d77;">note</a>
-      </p>
+    <div id="en" class="content-section" style="display:none;">
+      <div class="profile-header" data-aos="fade-down">
+        <h1>Taichi Eto</h1>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/taichieto/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.wantedly.com/id/taichi_eto" target="_blank" class="social-icon"><i class="fas fa-briefcase"></i></a>
+          <a href="https://x.com/iTachiTaichi" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://note.com/itachitaichi" target="_blank" class="social-icon"><i class="fas fa-pen"></i></a>
+          <a href="https://instagram.com/taichi.jpg" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
 
-      <h2>Research</h2>
-      <p>Studying sustainable business strategy through system dynamics and AI (VAE, reinforcement learning, etc.).</p>
+      <div class="education" data-aos="fade-up">
+        <div class="education-timeline">
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-content">
+              <h3>N High School</h3>
+              <p class="education-period">April 2017 - April 2020</p>
+              <p class="education-description">High School Diploma</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="education-content">
+              <h3>Tokyo City University</h3>
+              <p class="education-subtitle">Department of Environmental Management Systems</p>
+              <p class="education-period">April 2022 - March 2026 (Expected)</p>
+              <p class="education-description">Currently Enrolled</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <div class="education-content">
+              <h3>Tokyo City University Graduate School</h3>
+              <p class="education-subtitle">School of Information and Data Science</p>
+              <p class="education-description">Planning to Enroll</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <h2>Work & Internship Experience</h2>
-      <ul>
-        <li><strong><a href="https://ridge-i.com/" target="_blank" style="color: #006d77;">Ridge-i Inc.</a> (AI Engineer Intern)</strong>: Developed anomaly detection models with VAE, joint research with a famous national university in Japan</li>
-        <li><strong><a href="https://www.nexway.co.jp/" target="_blank" style="color: #006d77;">Nexway Co., Ltd.</a> (TIS INTEC Group｜Communications Intern)</strong>: Authored articles, pitched in English at RubyKaigi 2023, edited videos</li>
-        <li><strong><a href="https://10tan.co.jp/" target="_blank" style="color: #006d77;">10tan Inc.</a> (Creative/Operations Intern)</strong>: Supported corporate site, developed Slack Bot, coordinated interns</li>
-        <li><strong><a href="https://newcreator.org/" target="_blank" style="color: #006d77;">NPO newCreator.org</a></strong>: Worked on educational equality initiatives, helped plan workshops and ran crowdfunding campaign that raised 300,000 yen</li>
-        <li><strong><a href="https://tcu.ac.jp" target="_blank" style="color: #006d77;">Tokyo City University, Department of Social Media Studies – Introductory Programming Seminar (SA)</a></strong>: Assisted in teaching programming (HTML/CSS/JavaScript) to students in humanities and social sciences</li>
-      </ul>
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-flask"></i> Research</h2>
+        <p>Studying sustainable business strategy through system dynamics and AI (VAE, reinforcement learning, etc.).</p>
+      </section>
 
-      <h2>Student Leadership</h2>
-      <ul>
-        <li><strong><a href="https://yokohama-fest.net/" target="_blank" style="color: #006d77;">University Festival Committee</a> (PR Dept. / Website Team Lead)</strong>: Led official website design & operations. Organized "My Treasure Exhibition" independently as a passion project</li>
-        <li><strong><a href="https://toshidai-ems.net/" target="_blank" style="color: #006d77;">Dept. of Environmental Management Student Council</a> President (Nov 2023 – Mar 2025)</strong>: Hosted OB networking events and led the "Hashi-Watashi Project," producing and distributing lucky chopsticks from sustainably harvested bamboo</li>
-        <li><strong><a href="https://gdg.community.dev/gdg-on-campus-tokyo-city-university-tokyo-japan/" target="_blank" style="color: #006d77;">Google Developer Groups on Campus Tokyo City University</a> Core Member</strong></li>
-      </ul>
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-briefcase"></i> Work & Internship Experience</h2>
+        <ul class="experience-list">
+          <li class="experience-item">
+            <strong><a href="https://ridge-i.com/" target="_blank">Ridge-i Inc.</a> (AI Engineer Intern)</strong>
+            <p class="experience-period">August 2024 - February 2025</p>
+            <p>Developed anomaly detection models with VAE, joint research with a famous national university in Japan</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://10tan.co.jp/" target="_blank">10tan Inc.</a> (Creative/Operations Intern)</strong>
+            <p class="experience-period">September 2023 - February 2024</p>
+            <p>Supported corporate site, developed Slack Bot, coordinated interns</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://www.nexway.co.jp/" target="_blank">Nexway Co., Ltd.</a> (TIS INTEC Group｜Communications Intern)</strong>
+            <p class="experience-period">August 2022 - September 2023</p>
+            <p>Authored articles, pitched in English at RubyKaigi 2023, edited videos</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://newcreator.org/" target="_blank">NPO newCreator.org</a></strong>
+            <p class="experience-period">June 2022 - Present</p>
+            <p>Worked on educational equality initiatives, helped plan workshops and ran crowdfunding campaign that raised 300,000 yen</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://tcu.ac.jp" target="_blank">Tokyo City University, Department of Social Media Studies – Introductory Programming Seminar (SA)</a></strong>
+            <p>Assisted in teaching programming (HTML/CSS/JavaScript) to students in humanities and social sciences</p>
+          </li>
+        </ul>
+      </section>
 
-      <h2>Awards</h2>
-      <ul>
-        <li><strong>Inno-vation Program Nominee (2018)</strong>: Nominated for proposing an app that allows users to access the life story of the deceased by scanning a QR code on a gravestone</li>
-        <li><strong>10tan Inc. Core Values Award</strong>: Recognized for embodying the principle that "Work is not something given to you, but something you create. However, this doesn't mean doing things aimlessly. It's important to think deeply about 'WHY' and then determine what is needed and what should be done, before taking action."</li>
-      </ul>
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-users"></i> Student Leadership</h2>
+        <ul class="activity-list">
+          <li class="activity-item">
+            <strong><a href="https://yokohama-fest.net/" target="_blank">University Festival Committee</a> (PR Dept. / Website Team Lead)</strong>
+            <p>Led official website design & operations. Organized "My Treasure Exhibition" independently as a passion project</p>
+          </li>
+          <li class="activity-item">
+            <strong><a href="https://toshidai-ems.net/" target="_blank">Dept. of Environmental Management Student Council</a> President</strong>
+            <p class="experience-period">November 2023 - March 2025</p>
+            <p>Hosted OB networking events and led the "Hashi-Watashi Project," producing and distributing lucky chopsticks from sustainably harvested bamboo</p>
+          </li>
+          <li class="activity-item">
+            <strong><a href="https://gdg.community.dev/gdg-on-campus-tokyo-city-university-tokyo-japan/" target="_blank">Google Developer Groups on Campus Tokyo City University</a> Core Member</strong>
+          </li>
+        </ul>
+      </section>
 
-      <h2>Skills</h2>
-      <ul>
-        <li>Python (PyTorch, Optuna, NumPy), JavaScript, HTML/CSS</li>
-        <li>AI: VAE, anomaly detection, reinforcement learning (DQN, PPO), Bayesian inference</li>
-        <li>Medical imaging (DICOM format experience)</li>
-        <li>Modeling: Vensim, building system dynamics model, BDCraft Cubik</li>
-        <li>TOEIC 780 | Semester exchange at QUT (Business course)</li>
-      </ul>
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-trophy"></i> Awards</h2>
+        <ul class="awards-list">
+          <li class="award-item">
+            <strong>Inno-vation Program Nominee (2018)</strong>
+            <p>Nominated for proposing an app that allows users to access the life story of the deceased by scanning a QR code on a gravestone</p>
+          </li>
+          <li class="award-item">
+            <strong>10tan Inc. Core Values Award</strong>
+            <p>Recognized for embodying the principle that "Work is not something given to you, but something you create. However, this doesn't mean doing things aimlessly. It's important to think deeply about 'WHY' and then determine what is needed and what should be done, before taking action."</p>
+          </li>
+        </ul>
+      </section>
 
-      <h2>Others</h2>
-      <ul>
-        <li><strong><a href="https://minecraft.jp/events/99" target="_blank" style="color: #006d77;">Operated a custom Minecraft (Java Edition) server | Ranked 12th in Japan</a></strong></li>
-      </ul>
-      <h2>About Me</h2>
-      <p>Formerly a long-term absentee in elementary and junior high school. Studied independently from high school and advanced to university. Passionate about turning adversity into strength to solve societal issues through technology and strategy.</p>
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-code"></i> Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Programming Languages</h3>
+            <p>Python (PyTorch, Optuna, NumPy), JavaScript, HTML/CSS</p>
+          </div>
+          <div class="skill-category">
+            <h3>AI Technologies</h3>
+            <p>VAE, anomaly detection, reinforcement learning (DQN, PPO), Bayesian inference</p>
+          </div>
+          <div class="skill-category">
+            <h3>Specialized Skills</h3>
+            <p>Medical imaging (DICOM format experience)</p>
+          </div>
+          <div class="skill-category">
+            <h3>Modeling</h3>
+            <p>Vensim, building system dynamics model, BDCraft Cubik</p>
+          </div>
+          <div class="skill-category">
+            <h3>Language & Study Abroad</h3>
+            <p>TOEIC 780 | Semester exchange at QUT (Business course)</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-gamepad"></i> Others</h2>
+        <ul class="others-list">
+          <li class="other-item">
+            <strong><a href="https://minecraft.jp/events/99" target="_blank">Operated a custom Minecraft (Java Edition) server | Ranked 12th in Japan</a></strong>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-user"></i> About Me</h2>
+        <p>Formerly a long-term absentee in elementary and junior high school. Studied independently from high school and advanced to university. Passionate about turning adversity into strength to solve societal issues through technology and strategy.</p>
+      </section>
     </div>
 
     <p class="note">※言語はボタンで切り替え可能です。スマートフォンでも閲覧対応済み。</p>
   </div>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
