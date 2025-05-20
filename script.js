@@ -4,7 +4,11 @@ AOS.init({
   easing: 'ease-in-out',
   once: true
 });
-
+// Disable pinch-zoom on mobile
+const metaViewport = document.createElement('meta');
+metaViewport.name = 'viewport';
+metaViewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+document.head.appendChild(metaViewport);
 // Language toggle functionality
 function toggleLang() {
   const jaContent = document.getElementById('ja');
@@ -46,7 +50,7 @@ document.querySelectorAll('.content-block').forEach(block => {
 // Add parallax effect to profile header
 window.addEventListener('scroll', () => {
   const header = document.querySelector('.profile-header');
-  const scrolled = window.pageYOffset;
+  const scrolled = window.scrollY;
   header.style.transform = `translateY(${scrolled * 0.1}px)`;
 });
 
