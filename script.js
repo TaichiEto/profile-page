@@ -65,3 +65,26 @@ document.addEventListener('DOMContentLoaded', () => {
     icon.style.animationDelay = `${index * 0.1}s`;
   });
 });
+
+// Cat mascot speech toggle
+function toggleCatSpeech() {
+  const speech = document.getElementById('catSpeech');
+  const messages = [
+    'にゃ〜ん！',
+    'みなさん、頑張って！',
+    'お疲れ様です〜',
+    'ページを見てくれてありがとう！'
+  ];
+  
+  // Random message
+  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+  speech.textContent = randomMessage;
+  
+  // Show speech bubble
+  speech.classList.add('show');
+  
+  // Hide after 3 seconds
+  setTimeout(() => {
+    speech.classList.remove('show');
+  }, 3000);
+}
