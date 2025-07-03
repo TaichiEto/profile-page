@@ -525,6 +525,11 @@ a[target="_blank"]:not(.social-icon):hover::after {
   animation: catBlink 4s ease-in-out infinite;
 }
 
+#innovation-2018 {
+  color: red;
+  font-weight: bold;
+}
+
 .cat-eyes::before {
   left: 2px;
 }
