@@ -30,9 +30,12 @@ function toggleLang() {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
   });
 });
 
@@ -50,8 +53,10 @@ document.querySelectorAll('.content-block').forEach(block => {
 // Add parallax effect to profile header
 window.addEventListener('scroll', () => {
   const header = document.querySelector('.profile-header');
-  const scrolled = window.scrollY;
-  header.style.transform = `translateY(${scrolled * 0.1}px)`;
+  if (header) {
+    const scrolled = window.scrollY;
+    header.style.transform = `translateY(${scrolled * 0.1}px)`;
+  }
 });
 
 // Initialize page
