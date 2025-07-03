@@ -712,9 +712,10 @@ a[target="_blank"]:not(.social-icon):hover::after {
 
 .project-image {
   flex-shrink: 0;
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
+  width: 160px;
+  height: auto;
+  max-height: 280px;
+  object-fit: contain;
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-light);
