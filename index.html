@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>衛藤 泰地｜Taichi Eto</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="icon" href="favicon.ico">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://www.youtube.com">
+  <link rel="preconnect" href="https://i.ytimg.com">
+</head>
+<body>
+  <!-- Opening Animation -->
+  <div class="opening-animation">
+    <div class="opening-content">
+      <div class="loader-container">
+        <div class="particle-system">
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+        </div>
+        <div class="loading-text">
+          <span class="loading-word">Loading</span>
+          <div class="loading-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="lang-toggle">
+      <button onclick="toggleLang()" class="lang-btn">
+        <i class="fas fa-globe"></i> Switch Language
+      </button>
+    </div>
+
+    <div id="ja" class="content-section">
+      <div class="profile-header" data-aos="fade-down">
+        <h1 data-text="衛藤 泰地｜Taichi Eto">衛藤 泰地｜Taichi Eto</h1>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/taichieto/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.wantedly.com/id/taichi_eto" target="_blank" class="social-icon"><i class="fas fa-briefcase"></i></a>
+          <a href="https://x.com/iTachiTaichi" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://note.com/itachitaichi" target="_blank" class="social-icon"><i class="fas fa-pen"></i></a>
+          <a href="https://instagram.com/taichi.jpg" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="education" data-aos="fade-up">
+        <div class="education-timeline">
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-school"></i>
+            </div>
+            <div class="education-content">
+              <h3><a href="https://www.suita.ed.jp/school/jhs/04-daigo/" target="_blank">吹田市立第五中学校</a></h3>
+              <p class="education-period">2014年4月 - 2017年3月</p>
+              <p class="education-description">中学校卒業</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-content">
+              <h3><a href="https://nnn.ed.jp/" target="_blank">N高等学校（通学コース）</a></h3>
+              <p class="education-period">2017年4月 - 2020年4月</p>
+              <p class="education-description">高校卒業</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="education-content">
+              <h3><a href="https://www.tcu.ac.jp/" target="_blank">東京都市大学<br class="mobile-break">環境学部</a></h3>
+              <p class="education-subtitle">環境経営システム学科</p>
+              <p class="education-period">2022年4月 - 2026年3月（予定）</p>
+              <p class="education-description">在学中</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-plane"></i>
+            </div>
+            <div class="education-content">
+              <h3><a href="https://www.qut.edu.au/" target="_blank">クイーンズランド工科大学</a></h3>
+              <p class="education-subtitle">Business Course (University Study Abroad Semester)</p>
+              <p class="education-period">2024年2月 - 2024年6月</p>
+              <p class="education-description">セメスター留学</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <div class="education-content">
+              <h3><a href="https://www.tcu.ac.jp/" target="_blank">東京都市大学<br class="mobile-break">大学院</a></h3>
+              <p class="education-subtitle">情報データ科学研究科</p>
+              <p class="education-description">進学希望</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-flask"></i> 研究内容</h2>
+        <p>自然言語処理技術を用いた企業情報の分析に関する研究を行っています。企業の取り組みを開示情報のテキスト分析によって定量的に評価し、持続可能な経営戦略の分析、メカニズムの解明を目指した研究をしています。</p>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-briefcase"></i> 実務・インターン・アルバイト経験</h2>
+        <ul class="experience-list">
+          <li class="experience-item">
+            <strong><a href="https://prtimes.co.jp/" target="_blank">株式会社PR TIMES</a>（Jooto事業部 エンジニアインターン）</strong>
+            <p class="experience-period">2025年7月16日 開始予定</p>
+            <p>Jooto事業部でエンジニアインターンとして務務</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://ridge-i.com/" target="_blank">株式会社Ridge-i</a>（パートタイム 深層学習エンジニア）</strong>
+            <p class="experience-period">2024年8月 - 2025年2月28日</p>
+            <p>北海道大学動物医療センターとの共同研究プロジェクトにアサインされました。本プロジェクトでは、動物のX線画像から骨を除去する画像処理AIモデルの改良と実装を担当しました。通常、人間のX線画像における骨除去には、"骨あり・骨なし"のペア画像が必要とされますが、動物医療においては診療現場で骨のみを除去した画像を取得することが困難であるため、学習用の正解データが得られないという課題があります。私はこの制約に対応するため、他の医療画像モダリティとX線画像を融合し、教師データが欠如している状況でも機能する骨除去AIモデルの設計と実装に取り組みました。この研究は、獣医師の診断支援を目的とした臨床的意義に加え、画像処理と機械学習の研究としても高い挑戦性を含んでいます。</p>
+            <p class="related-publication"><strong>関連論文：</strong> T. Hashimoto, A. Maruo, S. Sekiguchi, Y. Ushiku and G. Shimbo, "Unsupervised Domain Adaptation for Human and Animal Chest X-Ray Bone Suppression," 2024 IEEE International Symposium on Biomedical Imaging (ISBI), Athens, Greece, 2024, pp. 1-5, doi: 10.1109/ISBI56570.2024.10635259.</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://10tan.co.jp/" target="_blank">株式会社10tan</a>（制作・業務支援インターン）</strong>
+            <p class="experience-period">2023年9月 - 2024年2月</p>
+            <p>コーポレートサイト制作支援、Slack Bot開発、インターン生マネジメント</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://www.nexway.co.jp/" target="_blank">株式会社ネクスウェイ</a>（TISインテックグループ｜広報インターン）</strong>
+            <p class="experience-period">2022年8月 - 2023年9月</p>
+            <p>新卒学生向けに会社のイベントレポートやサービスのリリースに関する記事の執筆をメイン業務としつつも、リファラル採用における新たな仕組み作りの提案やなど、多くのことに取り組み・経験しました。2023年5月に長野県で開催されたRubyKaigi 2023では事業の説明を英語で行うなど、対面イベントにも積極的に参加し、ブース企画の提案や当日会場で放送するCM動画の編集なども行いました。対面かつ長期であることを活かし、手隙の際は社員さんが働きやすい環境作りに微力ながら貢献できるよう努力しました。</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://newcreator.org/" target="_blank">特定非営利活動法人 ニュークリエイター・オルグ</a></strong>
+            <p class="experience-period">2022年6月 - 現在</p>
+            <p>教育格差是正に向けた活動。ワークショップの開催に向け、企画とクラウドファンディング実施に携わる → 30万円調達。</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://tcu.ac.jp" target="_blank">東京都市大学 社会メディア学科</a> (基礎プログラミング演習 | SA・学生アシスタント業務)</strong>
+            <p>HTML/CSS/JavaScriptを用いて、文系学生向けのプログラミング授業のアシスタント業務に従事しました</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://tcu.ac.jp" target="_blank">東京都市大学 情報システム学科</a> (プログラミング演習B | SA・学生アシスタント業務)</strong>
+            <p>Javaを用いて、情報系学科学生向けのプログラミング授業のアシスタント業務に従事しました</p>
+          </li>
+          <li class="experience-item">
+            <strong>ハードオフ南摂津駅前店（アルバイト）</strong>
+            <p class="experience-period">2017年8月 - 2018年10月</p>
+            <p>得意分野であるPCの修理・点検の実践から、これまで馴染みのなかった接客、楽器や工具の整備・販売など、様々な経験に恵まれました。</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-code"></i> 制作物</h2>
+        <ul class="others-list">
+          <li class="other-item">
+            <strong><a href="https://github.com/TaichiEto/bonbi-beergame" target="_blank">Bonbi Beergame - サプライチェーン経営シミュレーションゲーム</a></strong>
+            <p>既存のビールゲームに独自の外乱要素を追加したサプライチェーン管理学習用Webアプリケーション。従来のビールゲームでは扱われない災害・市場変動等のリアルな外乱イベント（15%の確率で発生）を新たに設計・実装し、不確実性下での意思決定とリスク管理を学習できるよう拡張しました。最大4人でリアルタイムプレイ可能で、小売業者・卸売業者・流通業者・工場の4つの役割に分かれてプレイします。Flask + Socket.IOによるリアルタイム同期、Chart.jsによる履歴可視化、AIプレイヤーとのソロプレイモードなどを実装。52週間のシミュレーションでサプライチェーン全体のコスト最小化を目指します。</p>
+          </li>
+          <li class="other-item">
+            <div class="project-content">
+              <img src="assets/imgs/hakatter.webp" alt="墓ったーアプリのスクリーンショット" class="project-image" loading="lazy">
+              <div class="project-info">
+                <strong>墓ったー</strong>
+                <p>墓石に貼付したQRコードから故人の情報を閲覧できるアプリ。<a id="innovation-2018">総務省後援 異能vation 2018ノミネート。</a></p>
+              </div>
+            </div>
+          </li>
+          <li class="other-item">
+            <strong><a href="https://minecraft.jp/events/99" target="_blank">Minecraft(Java版)カスタムサーバーを運営 | 日本12位</a></strong>
+            <p>2014年から2017年まで約3年間運営。初期は自宅の古いPCから始まり、コミュニティの成長に伴い寄付を募ってレンタルサーバーに移行しました。DDoS攻撃やプラグインの脆弱性を突いた攻撃に対処する中で、サービス運用の実践的な知識を習得。Javaプログラミング、3Dモデリング、コンテンツ制作など、多方面にわたるスキルを横断的に学ぶことができました。</p>
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/OwDOZYg2U48" title="Minecraft Server Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-users"></i> 学生団体活動</h2>
+        <ul class="activity-list">
+          <li class="activity-item">
+            <strong><a href="https://yokohama-fest.net/" target="_blank">学園祭実行委員会</a> 広報部（Web制作チームリーダー）</strong>
+            <p>公式サイトの設計・制作を主導。「マイ・トレジャー展」は副業的に個人で企画・実行</p>
+          </li>
+          <li class="activity-item">
+            <strong><a href="https://toshidai-ems.net/" target="_blank">環境経営システム学科学生会</a> 会長</strong>
+            <p class="experience-period">2023年11月 - 2025年3月</p>
+            <p>OB招致イベントの開催や「Hashi-Watashi Project（合格祈願箸の製作・配布）」を主催し、学科内外の交流とSDGs推進に貢献</p>
+          </li>
+          <li class="activity-item">
+            <strong><a href="https://gdg.community.dev/gdg-on-campus-tokyo-city-university-tokyo-japan/" target="_blank">Google Developer Groups on Campus Tokyo City University</a> Core Member</strong>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-trophy"></i> 受賞歴</h2>
+        <ul class="awards-list">
+          <li class="award-item">
+            <strong>異能vation 2018 ノミネート</strong>
+            <p>墓石に貼付したQRコードから故人の情報を閲覧できるアプリのアイデアが評価されてノミネート</p>
+          </li>
+          <li class="award-item">
+            <strong>株式会社10tan コアバリュー賞</strong>
+            <p>「仕事は与えられるものではなく、自分で創るものである。しかし、それはただ闇雲に何かをすればよいと言うわけではない。「WHY」をしっかりと考えた上で何が必要か、何をすべきかを自分で考え、行動に移すことが重要である。」に該当</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-tv"></i> メディア出演歴</h2>
+        <ul class="media-list">
+          <li class="media-item">
+            <div class="media-content">
+              <strong>朝日テレビ放送 「キャスト #withyou」</strong>
+              <p class="media-period">2018年</p>
+              <p class="media-description">不登校経験者が、現在同じ立場に置かれている方々にメッセージを送るという番組に出演。</p>
+            </div>
+          </li>
+          <li class="media-item">
+            <div class="media-content">
+              <strong><a href="https://www.youtube.com/watch?v=7CZpZaxOyfE" target="_blank">東京都市大学 YouTubeチャンネル</a></strong>
+              <p class="media-period">2025年</p>
+              <p class="media-description">大学の公式YouTubeチャンネルに出演。ATAPプログラム参加者としてインタビューを受ける。オーストラリアでの留学経験や、現地での学び、異文化での挑戦について語る。</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-code"></i> スキル</h2>
+        <div class="skills-container">
+          <!-- プログラミング言語 -->
+          <div class="skill-category-section">
+            <h3 class="skill-category-title">プログラミング言語</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Python</span>
+                  <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">JavaScript</span>
+                  <span class="skill-percentage">70%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="70"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">HTML/CSS</span>
+                  <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="75"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Java</span>
+                  <span class="skill-percentage">60%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="60"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Google Apps Script</span>
+                  <span class="skill-percentage">50%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="50"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI技術 -->
+          <div class="skill-category-section">
+            <h3 class="skill-category-title">AI技術</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">VAE</span>
+                  <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="75"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">DAE・E-DAE</span>
+                  <span class="skill-percentage">10%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="10"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">異常検知</span>
+                  <span class="skill-percentage">40%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="40"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">強化学習（DQN, PPO）</span>
+                  <span class="skill-percentage">30%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="30"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">ベイズ推定</span>
+                  <span class="skill-percentage">35%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="35"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 専門スキル -->
+          <div class="skill-category-section">
+            <h3 class="skill-category-title">専門スキル</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">医療画像処理（DICOM形式）</span>
+                  <span class="skill-percentage">70%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="70"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- モデリング -->
+          <div class="skill-category-section">
+            <h3 class="skill-category-title">モデリング</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Vensim</span>
+                  <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="75"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">システムダイナミクス</span>
+                  <span class="skill-percentage">60%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="60"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">BDCraft Cubik</span>
+                  <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 語学・留学 -->
+          <div class="skill-category-section">
+            <h3 class="skill-category-title">語学</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">英語（TOEIC 780・QUT留学）</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="85"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="en" class="content-section" style="display:none;">
+      <div class="profile-header" data-aos="fade-down">
+        <h1 data-text="Taichi Eto">Taichi Eto</h1>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/taichieto/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.wantedly.com/id/taichi_eto" target="_blank" class="social-icon"><i class="fas fa-briefcase"></i></a>
+          <a href="https://x.com/iTachiTaichi" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://note.com/itachitaichi" target="_blank" class="social-icon"><i class="fas fa-pen"></i></a>
+          <a href="https://instagram.com/taichi.jpg" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="education" data-aos="fade-up">
+        <div class="education-timeline">
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-school"></i>
+            </div>
+            <div class="education-content">
+              <h3><a href="https://www.suita.ed.jp/school/jhs/04-daigo/" target="_blank">Suita Municipal 5th Junior High School</a></h3>
+              <p class="education-period">April 2014 - March 2017</p>
+              <p class="education-description">Junior High School Diploma</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-content">
+              <h3><a href="https://nnn.ed.jp/" target="_blank">N High School</a></h3>
+              <p class="education-period">April 2017 - April 2020</p>
+              <p class="education-description">High School Diploma</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="education-content">
+              <h3><a href="https://www.tcu.ac.jp/" target="_blank">Tokyo City University</a></h3>
+              <p class="education-subtitle">Dept. of Environmental<br class="mobile-break">Management Systems</p>
+              <p class="education-period">April 2022 - March 2026 (Expected)</p>
+              <p class="education-description">Currently Enrolled</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-plane"></i>
+            </div>
+            <div class="education-content">
+              <h3><a href="https://www.qut.edu.au/" target="_blank">Queensland University of Technology</a></h3>
+              <p class="education-subtitle">Business Course (University Study Abroad Semester)</p>
+              <p class="education-period">February 2024 - June 2024</p>
+              <p class="education-description">Study Abroad</p>
+            </div>
+          </div>
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <div class="education-content">
+              <h3><a href="https://www.tcu.ac.jp/" target="_blank">Tokyo City University<br class="mobile-break">Graduate School</a></h3>
+              <p class="education-subtitle">School of Information<br class="mobile-break">and Data Science</p>
+              <p class="education-description">Planning to Enroll</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-flask"></i> Research</h2>
+        <p>Research on corporate information analysis using natural language processing technology. Focusing on quantitatively evaluating corporate environmental and management initiatives through text analysis of corporate disclosures, aiming to support the realization of sustainable business strategies.</p>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-briefcase"></i> Work, Internship & Part-time Experience</h2>
+        <ul class="experience-list">
+          <li class="experience-item">
+            <strong><a href="https://prtimes.co.jp/" target="_blank">PR TIMES Inc.</a> (Jooto Division - Engineer Intern)</strong>
+            <p class="experience-period">July 2025 - Present</p>
+            <p>Working as an engineer intern in the Jooto division</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://ridge-i.com/" target="_blank">Ridge-i Inc.</a> (AI Engineer Intern)</strong>
+            <p class="experience-period">August 2024 - February 2025</p>
+            <p>Assigned to a collaborative research project with Hokkaido University Veterinary Medical Center. I was responsible for improving and implementing an AI model for bone removal from animal X-ray images. While bone removal in human X-ray images typically requires paired images ("with bone" and "without bone"), veterinary medicine faces the challenge that obtaining bone-removed images in clinical settings is difficult, making it impossible to acquire ground truth data for training. To address this constraint, I worked on designing and implementing a bone removal AI model that fuses other medical imaging modalities with X-ray images and functions even in situations where supervisory data is lacking. This research has high clinical significance for supporting veterinary diagnosis and presents significant challenges in image processing and machine learning research.</p>
+            <p class="related-publication"><strong>Related Publication:</strong> T. Hashimoto, A. Maruo, S. Sekiguchi, Y. Ushiku and G. Shimbo, "Unsupervised Domain Adaptation for Human and Animal Chest X-Ray Bone Suppression," 2024 IEEE International Symposium on Biomedical Imaging (ISBI), Athens, Greece, 2024, pp. 1-5, doi: 10.1109/ISBI56570.2024.10635259.</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://10tan.co.jp/" target="_blank">10tan Inc.</a> (Creative/Operations Intern)</strong>
+            <p class="experience-period">September 2023 - February 2024</p>
+            <p>Supported corporate site, developed Slack Bot, coordinated interns</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://www.nexway.co.jp/" target="_blank">Nexway Co., Ltd.</a> (TIS INTEC Group｜Communications Intern)</strong>
+            <p class="experience-period">August 2022 - September 2023</p>
+            <p>Authored articles, pitched in English at RubyKaigi 2023, edited videos</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://newcreator.org/" target="_blank">NPO newCreator.org</a></strong>
+            <p class="experience-period">June 2022 - Present</p>
+            <p>Worked on educational equality initiatives, helped plan workshops and ran crowdfunding campaign that raised 300,000 yen</p>
+          </li>
+          <li class="experience-item">
+            <strong><a href="https://tcu.ac.jp" target="_blank">Tokyo City University, Department of Social Media Studies – Introductory Programming Seminar (SA)</a></strong>
+            <p>Assisted in teaching programming (HTML/CSS/JavaScript) to students in humanities and social sciences</p>
+          </li>
+          <li class="experience-item">
+            <strong>Hard Off Minami-Settsu Station Store (Part-time)</strong>
+            <p class="experience-period">August 2017 - October 2018</p>
+            <p>Gained diverse experience from practicing PC repair and inspection, which was my specialty, to customer service, instrument and tool maintenance, and sales - areas I had previously been unfamiliar with.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-users"></i> Student Leadership</h2>
+        <ul class="activity-list">
+          <li class="activity-item">
+            <strong><a href="https://yokohama-fest.net/" target="_blank">University Festival Committee</a> (PR Dept. / Website Team Lead)</strong>
+            <p>Led official website design & operations. Organized "My Treasure Exhibition" independently as a passion project</p>
+          </li>
+          <li class="activity-item">
+            <strong><a href="https://toshidai-ems.net/" target="_blank">Dept. of Environmental Management Student Council</a> President</strong>
+            <p class="experience-period">November 2023 - March 2025</p>
+            <p>Hosted OB networking events and led the "Hashi-Watashi Project," producing and distributing lucky chopsticks from sustainably harvested bamboo</p>
+          </li>
+          <li class="activity-item">
+            <strong><a href="https://gdg.community.dev/gdg-on-campus-tokyo-city-university-tokyo-japan/" target="_blank">Google Developer Groups on Campus Tokyo City University</a> Core Member</strong>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-trophy"></i> Awards</h2>
+        <ul class="awards-list">
+          <li class="award-item">
+            <strong>Inno-vation Program Nominee (2018)</strong>
+            <p>Nominated for proposing an app that allows users to access the life story of the deceased by scanning a QR code on a gravestone</p>
+          </li>
+          <li class="award-item">
+            <strong>10tan Inc. Core Values Award</strong>
+            <p>Recognized for embodying the principle that "Work is not something given to you, but something you create. However, this doesn't mean doing things aimlessly. It's important to think deeply about 'WHY' and then determine what is needed and what should be done, before taking action."</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-tv"></i> Media Appearances</h2>
+        <ul class="media-list">
+          <li class="media-item">
+            <div class="media-content">
+              <strong>TV Asahi "CAST #withyou"</strong>
+              <p class="media-period">2018</p>
+              <p class="media-description">Appeared on a program where former long-term absentees share messages with those currently in similar situations.</p>
+            </div>
+          </li>
+          <li class="media-item">
+            <div class="media-content">
+              <strong><a href="https://www.youtube.com/watch?v=7CZpZaxOyfE" target="_blank">Tokyo City University YouTube Channel</a></strong>
+              <p class="media-period">2025</p>
+              <p class="media-description">Featured on the university's official YouTube channel as a participant of the ATAP. Shared experiences from studying abroad in Australia, including academic learning and cultural challenges faced during the program.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-code"></i> Skills</h2>
+        <div class="skills-container">
+          <!-- Programming Languages -->
+          <div class="skill-category-section">
+            <h3 class="skill-category-title">Programming Languages</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Python</span>
+                  <span class="skill-percentage">90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="90"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">JavaScript</span>
+                  <span class="skill-percentage">70%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="70"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">HTML/CSS</span>
+                  <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="75"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Java</span>
+                  <span class="skill-percentage">60%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="60"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Google Apps Script</span>
+                  <span class="skill-percentage">50%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="50"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Technologies -->
+          <div class="skill-category-section">
+            <h3 class="skill-category-title">AI Technologies</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">VAE</span>
+                  <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="75"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">DAE & E-DAE</span>
+                  <span class="skill-percentage">10%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="10"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Anomaly Detection</span>
+                  <span class="skill-percentage">40%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="40"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Reinforcement Learning (DQN, PPO)</span>
+                  <span class="skill-percentage">30%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="30"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Bayesian Inference</span>
+                  <span class="skill-percentage">35%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="35"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Specialized Skills -->
+          <div class="skill-category-section">
+            <h3 class="skill-category-title">Specialized Skills</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Medical Image Processing (DICOM format)</span>
+                  <span class="skill-percentage">70%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="70"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modeling -->
+          <div class="skill-category-section">
+            <h3 class="skill-category-title">Modeling</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Vensim</span>
+                  <span class="skill-percentage">75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="75"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">System Dynamics</span>
+                  <span class="skill-percentage">60%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="60"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">BDCraft Cubik</span>
+                  <span class="skill-percentage">80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Language -->
+          <div class="skill-category-section">
+            <h3 class="skill-category-title">Language</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">English (TOEIC 780 & QUT Exchange)</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" data-level="85"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-code"></i> Projects</h2>
+        <ul class="others-list">
+          <li class="other-item">
+            <strong><a href="https://github.com/TaichiEto/bonbi-beergame" target="_blank">Bonbi Beergame - Supply Chain Management Simulation</a></strong>
+            <p>Enhanced version of the classic Beer Game with original disruption elements added for supply chain management education. I designed and implemented realistic disaster events and market fluctuations (15% probability) not found in traditional Beer Game simulations, extending the learning experience to include decision-making under uncertainty and risk management. Supports up to 4 players in real-time, with roles as retailer, wholesaler, distributor, and factory. Implemented with Flask + Socket.IO for real-time synchronization, Chart.js for performance visualization, and AI players for solo mode. Players aim to minimize total supply chain costs over a 52-week simulation.</p>
+          </li>
+          <li class="other-item">
+            <div class="project-content">
+              <img src="assets/imgs/hakatter.webp" alt="Hakatter app screenshot" class="project-image" loading="lazy">
+              <div class="project-info">
+                <strong>Hakatter</strong>
+                <p>An app that allows users to access the life story of the deceased by scanning a QR code on a gravestone. Nominated for the 2018 Inno-vation Program sponsored by the Ministry of Internal Affairs and Communications.</p>
+              </div>
+            </div>
+          </li>
+          <li class="other-item">
+            <strong><a href="https://minecraft.jp/events/99" target="_blank">Operated a custom Minecraft (Java Edition) server | Ranked 12th in Japan</a></strong>
+            <p>Operated for approximately 3 years from 2014 to 2017. Started with an old PC at home and later transitioned to a rental server funded through community donations as the server grew. Through handling DDoS attacks and vulnerabilities in plugins, I gained practical knowledge of service operations. This experience allowed me to learn various skills across different domains including Java programming, 3D modeling, and content creation.</p>
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/OwDOZYg2U48" title="Minecraft Server Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="content-block" data-aos="fade-up">
+        <h2><i class="fas fa-user"></i> About Me</h2>
+        <p>Formerly a long-term absentee in elementary and junior high school. Studied independently from high school and advanced to university. Passionate about turning adversity into strength to solve societal issues through technology and strategy.</p>
+      </section>
+    </div>
+
+    <p class="note">※言語はボタンで切り替え可能です。スマートフォンでも閲覧対応済み。</p>
+  </div>
+
+  <!-- Cute Cat Mascot -->
+  <div class="cat-mascot" onclick="toggleCatSpeech()">
+    <div class="cat-body">
+      <div class="cat-head">
+        <div class="cat-ears"></div>
+        <div class="cat-eyes"></div>
+        <div class="cat-nose"></div>
+        <div class="cat-mouth"></div>
+      </div>
+      <div class="cat-tail"></div>
+      <div class="cat-paws"></div>
+    </div>
+    <div class="cat-speech" id="catSpeech">にゃ〜ん！よろしくお願いします！</div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Taichi Eto. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
