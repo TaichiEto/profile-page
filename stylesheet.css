@@ -311,7 +311,8 @@ body {
 .activity-list,
 .awards-list,
 .others-list,
-.media-list {
+.media-list,
+.qualifications-list {
   list-style: none;
   padding: 0;
 }
@@ -320,7 +321,8 @@ body {
 .activity-item,
 .award-item,
 .other-item,
-.media-item {
+.media-item,
+.qualification-item {
   padding: 32px;
   margin-bottom: 24px;
   border-left: 4px solid var(--accent-color);
@@ -335,17 +337,38 @@ body {
 .activity-item:hover,
 .award-item:hover,
 .other-item:hover,
-.media-item:hover {
+.media-item:hover,
+.qualification-item:hover {
   transform: translateX(8px) translateY(-2px);
   box-shadow: var(--shadow-medium);
   border-left-color: var(--accent-secondary);
   border-color: var(--accent-color);
 }
 
+/* Qualifications specific styling */
+.qualification-item {
+  border-left-color: #34c759;
+  position: relative;
+}
+
+.qualification-item:hover {
+  border-left-color: #30d158;
+}
+
+.qualification-item::before {
+  content: "🏆";
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  font-size: 24px;
+  opacity: 0.7;
+}
+
 .experience-item strong,
 .activity-item strong,
 .award-item strong,
-.other-item strong {
+.other-item strong,
+.qualification-item strong {
   display: block;
   margin-bottom: 8px;
   color: var(--text-color);
