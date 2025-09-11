@@ -384,6 +384,30 @@ body {
   font-weight: 500;
 }
 
+/* Award content with image layout */
+.award-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.award-image {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--shadow-light);
+  flex-shrink: 0;
+}
+
+.award-info {
+  flex: 1;
+}
+
+.award-info strong {
+  margin: 0 0 8px 0;
+}
+
 /* Skills Container Layout */
 .skills-container {
   display: flex;
@@ -1026,6 +1050,20 @@ a[target="_blank"]:not(.social-icon):hover::after {
     height: 100%;
     border: none;
     border-radius: var(--border-radius);
+  }
+
+  /* Award image mobile styles */
+  .award-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .award-image {
+    width: 100%;
+    height: auto;
+    align-self: center;
+    max-width: 200px;
+    object-fit: contain;
   }
 
   .mobile-break {
