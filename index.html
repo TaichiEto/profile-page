@@ -13,30 +13,6 @@
   <link rel="preconnect" href="https://i.ytimg.com">
 </head>
 <body>
-  <!-- Opening Animation -->
-  <div class="opening-animation">
-    <div class="opening-content">
-      <div class="loader-container">
-        <div class="particle-system">
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
-          <div class="particle"></div>
-        </div>
-        <div class="loading-text">
-          <span class="loading-word">Loading</span>
-          <div class="loading-dots">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="container">
     <div class="lang-toggle">
       <button onclick="toggleLang()" class="lang-btn">
@@ -56,6 +32,20 @@
           <a href="https://github.com/TaichiEto" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
         </div>
       </div>
+
+      <!-- Navigation Header -->
+      <nav class="main-nav" data-aos="fade-down">
+        <ul class="nav-list">
+          <li><a href="#research">研究内容</a></li>
+          <li><a href="#experience">実務経験</a></li>
+          <li><a href="#projects">制作物</a></li>
+          <li><a href="#activities">学生団体</a></li>
+          <li><a href="#awards">受賞歴</a></li>
+          <li><a href="#certifications">資格</a></li>
+          <li><a href="#media">メディア</a></li>
+          <li><a href="#skills">スキル</a></li>
+        </ul>
+      </nav>
 
       <div class="education" data-aos="fade-up">
         <div class="education-timeline">
@@ -114,12 +104,12 @@
         </div>
       </div>
 
-      <section class="content-block" data-aos="fade-up">
+      <section id="research" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-flask"></i> 研究内容</h2>
         <p>自然言語処理技術を用いた企業情報の分析に関する研究を行っています。企業の取り組みを開示情報のテキスト分析によって定量的に評価し、持続可能な経営戦略の分析、メカニズムの解明を目指した研究をしています。</p>
       </section>
 
-      <section class="content-block" data-aos="fade-up">
+      <section id="experience" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-briefcase"></i> 実務・インターン・アルバイト経験</h2>
         <ul class="experience-list">
           <li class="experience-item">
@@ -164,7 +154,7 @@
         </ul>
       </section>
 
-      <section class="content-block" data-aos="fade-up">
+      <section id="projects" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-code"></i> 制作物</h2>
         <ul class="others-list">
           <li class="other-item">
@@ -190,7 +180,7 @@
         </ul>
       </section>
 
-      <section class="content-block" data-aos="fade-up">
+      <section id="activities" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-users"></i> 学生団体活動</h2>
         <ul class="activity-list">
           <li class="activity-item">
@@ -208,7 +198,7 @@
         </ul>
       </section>
 
-      <section class="content-block" data-aos="fade-up">
+      <section id="awards" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-trophy"></i> 受賞歴</h2>
         <ul class="awards-list">
           <li class="award-item">
@@ -231,8 +221,8 @@
         </ul>
       </section>
 
-      <section class="content-block" data-aos="fade-up">
-        <h2><i class="fas fa-certificate"></i> 資格</h2>
+      <section id="certifications" class="content-block" data-aos="fade-up">
+        <h2>資格</h2>
         <ul class="qualifications-list">
           <li class="qualification-item">
             <strong>TOEIC L&R 780</strong>
@@ -245,7 +235,7 @@
         </ul>
       </section>
 
-      <section class="content-block" data-aos="fade-up">
+      <section id="media" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-tv"></i> メディア出演歴</h2>
         <ul class="media-list">
           <li class="media-item">
@@ -265,7 +255,7 @@
         </ul>
       </section>
 
-      <section class="content-block" data-aos="fade-up">
+      <section id="skills" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-code"></i> スキル</h2>
         <div class="skills-container">
           <!-- プログラミング言語 -->
@@ -275,7 +265,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Python</span>
-                  <span class="skill-percentage">90%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="90"></div>
@@ -284,7 +273,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">JavaScript</span>
-                  <span class="skill-percentage">70%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="70"></div>
@@ -293,7 +281,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">HTML/CSS</span>
-                  <span class="skill-percentage">75%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="75"></div>
@@ -302,7 +289,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Java</span>
-                  <span class="skill-percentage">60%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="60"></div>
@@ -311,7 +297,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Google Apps Script</span>
-                  <span class="skill-percentage">50%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="50"></div>
@@ -327,7 +312,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">VAE</span>
-                  <span class="skill-percentage">75%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="75"></div>
@@ -336,7 +320,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">DAE・E-DAE</span>
-                  <span class="skill-percentage">10%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="10"></div>
@@ -345,7 +328,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">異常検知</span>
-                  <span class="skill-percentage">40%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="40"></div>
@@ -354,7 +336,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">強化学習（DQN, PPO）</span>
-                  <span class="skill-percentage">30%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="30"></div>
@@ -363,7 +344,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">ベイズ推定</span>
-                  <span class="skill-percentage">35%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="35"></div>
@@ -379,7 +359,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">医療画像処理（DICOM形式）</span>
-                  <span class="skill-percentage">70%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="70"></div>
@@ -395,7 +374,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Vensim</span>
-                  <span class="skill-percentage">75%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="75"></div>
@@ -404,7 +382,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">システムダイナミクス</span>
-                  <span class="skill-percentage">60%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="60"></div>
@@ -413,7 +390,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">BDCraft Cubik</span>
-                  <span class="skill-percentage">80%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="80"></div>
@@ -429,7 +405,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">英語（TOEIC 780・QUT留学）</span>
-                  <span class="skill-percentage">85%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="85"></div>
@@ -453,6 +428,20 @@
           <a href="https://github.com/TaichiEto" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
         </div>
       </div>
+
+      <!-- Navigation Header -->
+      <nav class="main-nav" data-aos="fade-down">
+        <ul class="nav-list">
+          <li><a href="#research">Research</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#activities">Leadership</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#media">Media</a></li>
+          <li><a href="#skills">Skills</a></li>
+        </ul>
+      </nav>
 
       <div class="education" data-aos="fade-up">
         <div class="education-timeline">
@@ -511,12 +500,12 @@
         </div>
       </div>
 
-      <section class="content-block" data-aos="fade-up">
+      <section id="research" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-flask"></i> Research</h2>
         <p>Research on corporate information analysis using natural language processing technology. Focusing on quantitatively evaluating corporate environmental and management initiatives through text analysis of corporate disclosures, aiming to support the realization of sustainable business strategies.</p>
       </section>
 
-      <section class="content-block" data-aos="fade-up">
+      <section id="experience" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-briefcase"></i> Work, Internship & Part-time Experience</h2>
         <ul class="experience-list">
           <li class="experience-item">
@@ -557,7 +546,7 @@
         </ul>
       </section>
 
-      <section class="content-block" data-aos="fade-up">
+      <section id="activities" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-users"></i> Student Leadership</h2>
         <ul class="activity-list">
           <li class="activity-item">
@@ -575,7 +564,7 @@
         </ul>
       </section>
 
-      <section class="content-block" data-aos="fade-up">
+      <section id="awards" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-trophy"></i> Awards</h2>
         <ul class="awards-list">
           <li class="award-item">
@@ -598,8 +587,8 @@
         </ul>
       </section>
 
-      <section class="content-block" data-aos="fade-up">
-        <h2><i class="fas fa-certificate"></i> Certifications</h2>
+      <section id="certifications" class="content-block" data-aos="fade-up">
+        <h2>Certifications</h2>
         <ul class="qualifications-list">
           <li class="qualification-item">
             <strong>TOEIC L&R 780</strong>
@@ -612,7 +601,7 @@
         </ul>
       </section>
 
-      <section class="content-block" data-aos="fade-up">
+      <section id="media" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-tv"></i> Media Appearances</h2>
         <ul class="media-list">
           <li class="media-item">
@@ -632,7 +621,7 @@
         </ul>
       </section>
 
-      <section class="content-block" data-aos="fade-up">
+      <section id="skills" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-code"></i> Skills</h2>
         <div class="skills-container">
           <!-- Programming Languages -->
@@ -642,7 +631,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Python</span>
-                  <span class="skill-percentage">90%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="90"></div>
@@ -651,7 +639,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">JavaScript</span>
-                  <span class="skill-percentage">70%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="70"></div>
@@ -660,7 +647,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">HTML/CSS</span>
-                  <span class="skill-percentage">75%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="75"></div>
@@ -669,7 +655,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Java</span>
-                  <span class="skill-percentage">60%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="60"></div>
@@ -678,7 +663,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Google Apps Script</span>
-                  <span class="skill-percentage">50%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="50"></div>
@@ -694,7 +678,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">VAE</span>
-                  <span class="skill-percentage">75%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="75"></div>
@@ -703,7 +686,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">DAE & E-DAE</span>
-                  <span class="skill-percentage">10%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="10"></div>
@@ -712,7 +694,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Anomaly Detection</span>
-                  <span class="skill-percentage">40%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="40"></div>
@@ -721,7 +702,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Reinforcement Learning (DQN, PPO)</span>
-                  <span class="skill-percentage">30%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="30"></div>
@@ -730,7 +710,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Bayesian Inference</span>
-                  <span class="skill-percentage">35%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="35"></div>
@@ -746,7 +725,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Medical Image Processing (DICOM format)</span>
-                  <span class="skill-percentage">70%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="70"></div>
@@ -762,7 +740,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">Vensim</span>
-                  <span class="skill-percentage">75%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="75"></div>
@@ -771,7 +748,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">System Dynamics</span>
-                  <span class="skill-percentage">60%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="60"></div>
@@ -780,7 +756,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">BDCraft Cubik</span>
-                  <span class="skill-percentage">80%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="80"></div>
@@ -796,7 +771,6 @@
               <div class="skill-item">
                 <div class="skill-info">
                   <span class="skill-name">English (TOEIC 780 & QUT Exchange)</span>
-                  <span class="skill-percentage">85%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-progress" data-level="85"></div>
@@ -807,7 +781,7 @@
         </div>
       </section>
 
-      <section class="content-block" data-aos="fade-up">
+      <section id="projects" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-code"></i> Projects</h2>
         <ul class="others-list">
           <li class="other-item">
