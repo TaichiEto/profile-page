@@ -449,6 +449,79 @@ body {
   margin: 0 0 8px 0;
 }
 
+/* Research Timeline Dot (icon-free marker) */
+.research-dot {
+  position: absolute;
+  left: 30px;
+  top: 28px;
+  width: 20px;
+  height: 20px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  border: 3px solid var(--background-color);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Research Tags */
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.research-tag {
+  background: var(--accent-color);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  opacity: 0.85;
+}
+
+.research-pubs {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+}
+
+.research-pubs p {
+  font-size: 13px;
+  color: var(--text-medium);
+  margin-bottom: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.research-pubs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.research-pubs ul li {
+  font-size: 14px;
+  color: var(--text-light);
+  background: var(--background-secondary, rgba(0,0,0,0.03));
+  border-left: 3px solid var(--accent-color);
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+}
+
+.research-pubs ul li a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.research-pubs ul li a:hover {
+  text-decoration: underline;
+}
+
 /* Skills Container Layout */
 .skills-container {
   display: flex;
