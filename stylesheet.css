@@ -1487,3 +1487,101 @@ a[target="_blank"]:not(.social-icon):hover::after {
     transform: rotate(10deg);
   }
 }
+
+.related-publication {
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--tertiary-color);
+  border-radius: var(--border-radius-sm);
+  font-size: 14px;
+  color: var(--text-medium);
+  border-left: 3px solid var(--accent-secondary);
+}
+
+.related-publication strong {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* About Me Section */
+#about-me .about-me-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+#about-me .about-me-image {
+  flex: 0 0 200px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--background-color);
+  box-shadow: var(--shadow-medium);
+  transition: transform var(--transition-speed) var(--transition-smooth);
+}
+
+#about-me .about-me-image:hover {
+  transform: scale(1.05) rotate(-3deg);
+}
+
+#about-me .about-me-text {
+  flex: 1;
+}
+
+#about-me .about-me-text h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 16px;
+}
+
+#about-me .about-me-text h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+#about-me .about-me-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-medium);
+  margin-bottom: 16px;
+}
+
+#about-me .about-me-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  #about-me .about-me-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  #about-me .about-me-image {
+    flex-basis: auto;
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.about-me-inline-image {
+  max-width: 560px; /* Set max-width to approximately 560px */
+  height: auto;
+  display: block;
+  margin: 20px auto; /* Center the image and add vertical spacing */
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  object-fit: contain; /* Ensure the entire image is visible */
+}
+
+@media (max-width: 768px) {
+  .about-me-inline-image {
+    margin: 15px auto;
+  }
+}
