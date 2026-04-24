@@ -1574,7 +1574,7 @@ a[target="_blank"]:not(.social-icon):hover::after {
   max-width: 560px; /* Set max-width to approximately 560px */
   height: auto;
   display: block;
-  margin: 20px auto; /* Center the image and add vertical spacing */
+  margin: 20px 0; /* Left-align to match YouTube iframe */
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-light);
   object-fit: contain; /* Ensure the entire image is visible */
@@ -1582,6 +1582,6 @@ a[target="_blank"]:not(.social-icon):hover::after {
 
 @media (max-width: 768px) {
   .about-me-inline-image {
-    margin: 15px auto;
+    margin: 15px 0;
   }
 }
