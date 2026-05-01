@@ -218,6 +218,17 @@
         <h2><i class="fas fa-code"></i> 制作物</h2>
         <ul class="others-list">
           <li class="other-item">
+            <strong><a href="https://toshidai.trade/" target="_blank">【非公式】東京都市大学 授業評判サイト「toshidai.trade」</a></strong>
+            <div class="project-tags">
+              <span class="research-tag">Python / Flask</span>
+              <span class="research-tag">PostgreSQL</span>
+              <span class="research-tag">Docker</span>
+              <span class="research-tag">Cloudflare Tunnel</span>
+              <span class="research-tag">Gunicorn</span>
+            </div>
+            <p>在学生向けの非公式授業評判サイト。匿名投稿システム（ログイン不要・削除用ワンタイムコード発行）、授業名の表記ゆれ対策（複合キーによる自動名寄せ＋AJAXサジェスト）、リアルタイム電車時刻表示（中川駅・尾山台駅、曜日・祝日自動判定）、Amazonアフィリエイトリンク管理、アクセス解析ダッシュボード（PV・UU・同接・流入元・デバイス判定）を実装。Flask Blueprint構成でREST APIを設計し、PostgreSQL + SQLAlchemy ORMでデータ管理。自宅サーバーでセルフホスティングし、管理画面をlocalhost限定ポートで分離、Cloudflare Tunnelによるゼロトラスト構成で外部公開。</p>
+          </li>
+          <li class="other-item">
             <strong><a href="https://github.com/TaichiEto/bonbi-beergame" target="_blank">Bonbi Beergame - サプライチェーン経営シミュレーションゲーム</a></strong>
             <p>既存のビールゲームに独自の外乱要素を追加したサプライチェーン管理学習用Webアプリケーション。従来のビールゲームでは扱われない災害・市場変動等のリアルな外乱イベント（15%の確率で発生）を新たに設計・実装し、不確実性下での意思決定とリスク管理を学習できるよう拡張しました。最大4人でリアルタイムプレイ可能で、小売業者・卸売業者・流通業者・工場の4つの役割に分かれてプレイします。Flask + Socket.IOによるリアルタイム同期、Chart.jsによる履歴可視化、AIプレイヤーとのソロプレイモードなどを実装。52週間のシミュレーションでサプライチェーン全体のコスト最小化を目指します。</p>
           </li>
@@ -779,6 +790,17 @@
       <section id="projects" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-code"></i> Projects</h2>
         <ul class="others-list">
+          <li class="other-item">
+            <strong><a href="https://toshidai.trade/" target="_blank">Unofficial Tokyo City University Course Review Site "toshidai.trade"</a></strong>
+            <div class="project-tags">
+              <span class="research-tag">Python / Flask</span>
+              <span class="research-tag">PostgreSQL</span>
+              <span class="research-tag">Docker</span>
+              <span class="research-tag">Cloudflare Tunnel</span>
+              <span class="research-tag">Gunicorn</span>
+            </div>
+            <p>An unofficial course review site for current students. Implemented an anonymous posting system (no login required, one-time deletion codes issued), course name normalization via composite keys with AJAX autocomplete suggestions, real-time train schedule display (Nakagawa & Oyamadai stations with automatic weekday/holiday detection), Amazon affiliate link management, and an access analytics dashboard (PV, UU, concurrent users, referrer tracking, device detection). Designed REST APIs with Flask Blueprint architecture and managed data with PostgreSQL + SQLAlchemy ORM. Self-hosted on a home server with admin panel isolated to localhost-only port, published via Cloudflare Tunnel with zero-trust configuration.</p>
+          </li>
           <li class="other-item">
             <strong><a href="https://github.com/TaichiEto/bonbi-beergame" target="_blank">Bonbi Beergame - Supply Chain Management Simulation</a></strong>
             <p>Enhanced version of the classic Beer Game with original disruption elements added for supply chain management education. I designed and implemented realistic disaster events and market fluctuations (15% probability) not found in traditional Beer Game simulations, extending the learning experience to include decision-making under uncertainty and risk management. Supports up to 4 players in real-time, with roles as retailer, wholesaler, distributor, and factory. Implemented with Flask + Socket.IO for real-time synchronization, Chart.js for performance visualization, and AI players for solo mode. Players aim to minimize total supply chain costs over a 52-week simulation.</p>
