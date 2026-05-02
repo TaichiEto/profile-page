@@ -218,15 +218,15 @@
         <h2><i class="fas fa-code"></i> 制作物</h2>
         <ul class="others-list">
           <li class="other-item">
-            <strong><a href="https://toshidai.trade/" target="_blank">【非公式】東京都市大学 授業評判サイト「toshidai.trade」</a></strong>
+            <strong><a href="https://toshidai.trade/" target="_blank">【非公式】東京都市大学 コミュニティサイト「toshidai.trade」</a></strong>
             <div class="project-tags">
-              <span class="research-tag">Python / Flask</span>
-              <span class="research-tag">PostgreSQL</span>
-              <span class="research-tag">Docker</span>
-              <span class="research-tag">Cloudflare Tunnel</span>
+              <span class="research-tag">Python / Flask (Blueprint)</span>
+              <span class="research-tag">PostgreSQL + SQLAlchemy</span>
+              <span class="research-tag">Docker / Docker Compose</span>
+              <span class="research-tag">Cloudflare CDN・GeoIP・Tunnel</span>
               <span class="research-tag">Gunicorn</span>
             </div>
-            <p>在学生向けの非公式授業評判サイト。匿名投稿システム（ログイン不要・削除用ワンタイムコード発行）、授業名の表記ゆれ対策（複合キーによる自動名寄せ＋AJAXサジェスト）、リアルタイム電車時刻表示（中川駅・尾山台駅、曜日・祝日自動判定）、Amazonアフィリエイトリンク管理、アクセス解析ダッシュボード（PV・UU・同接・流入元・デバイス判定）を実装。Flask Blueprint構成でREST APIを設計し、PostgreSQL + SQLAlchemy ORMでデータ管理。自宅サーバーでセルフホスティングし、管理画面をlocalhost限定ポートで分離、Cloudflare Tunnelによるゼロトラスト構成で外部公開。</p>
+            <p>在学生向けの非公式大学コミュニティサイト。授業・サークル・バイトの口コミ投稿・検索・ランキング機能、スレッド形式の掲示板（ふわふわ言葉変換・形態素解析によるマイルド化）、教科書交換掲示板、学食メニュー・シャトルバス・電車時刻のリアルタイム表示、アフィリエイトリンク管理を実装。セキュリティ面では、ハニーポットによるbot検知・ログ記録、IPレート制限・HMACトークンによるスパム対策を導入。管理画面ではアクセス解析（PV・UU・同接・流入元・デバイス判定）、IP追跡、GeoIPジオロケーション、ソーシャルシェア分析も実装。Flask Blueprint構成でREST APIを設計し、PostgreSQL + SQLAlchemy ORMでデータ管理。Docker Composeでコンテナ管理し、自宅サーバーでセルフホスティング。CloudflareのCDN・GeoIP・Tunnelによるゼロトラスト構成でIP非公開運用。</p>
           </li>
           <li class="other-item">
             <strong><a href="https://github.com/TaichiEto/bonbi-beergame" target="_blank">Bonbi Beergame - サプライチェーン経営シミュレーションゲーム</a></strong>
@@ -791,15 +791,15 @@
         <h2><i class="fas fa-code"></i> Projects</h2>
         <ul class="others-list">
           <li class="other-item">
-            <strong><a href="https://toshidai.trade/" target="_blank">Unofficial Tokyo City University Course Review Site "toshidai.trade"</a></strong>
+            <strong><a href="https://toshidai.trade/" target="_blank">Unofficial Tokyo City University Community Site "toshidai.trade"</a></strong>
             <div class="project-tags">
-              <span class="research-tag">Python / Flask</span>
-              <span class="research-tag">PostgreSQL</span>
-              <span class="research-tag">Docker</span>
-              <span class="research-tag">Cloudflare Tunnel</span>
+              <span class="research-tag">Python / Flask (Blueprint)</span>
+              <span class="research-tag">PostgreSQL + SQLAlchemy</span>
+              <span class="research-tag">Docker / Docker Compose</span>
+              <span class="research-tag">Cloudflare CDN / GeoIP / Tunnel</span>
               <span class="research-tag">Gunicorn</span>
             </div>
-            <p>An unofficial course review site for current students. Implemented an anonymous posting system (no login required, one-time deletion codes issued), course name normalization via composite keys with AJAX autocomplete suggestions, real-time train schedule display (Nakagawa & Oyamadai stations with automatic weekday/holiday detection), Amazon affiliate link management, and an access analytics dashboard (PV, UU, concurrent users, referrer tracking, device detection). Designed REST APIs with Flask Blueprint architecture and managed data with PostgreSQL + SQLAlchemy ORM. Self-hosted on a home server with admin panel isolated to localhost-only port, published via Cloudflare Tunnel with zero-trust configuration.</p>
+            <p>An unofficial community site for Tokyo City University students. Features include course, club, and part-time job reviews with search and rankings; a threaded bulletin board with profanity softening via Japanese morphological analysis; a textbook exchange board; real-time display of cafeteria menus, shuttle bus schedules, and train timetables; and affiliate link management. On the security side, implemented honeypot-based bot detection and logging, IP rate limiting, and HMAC token-based spam prevention. The admin dashboard covers access analytics (PV, UU, concurrent users, referrer tracking, device detection), IP tracking, GeoIP geolocation, and social share analysis. Built with Flask Blueprint architecture for REST APIs, PostgreSQL + SQLAlchemy ORM for data management, and Docker Compose for container orchestration. Self-hosted on a home server with Cloudflare CDN, GeoIP, and Tunnel for zero-trust configuration with IP concealment.</p>
           </li>
           <li class="other-item">
             <strong><a href="https://github.com/TaichiEto/bonbi-beergame" target="_blank">Bonbi Beergame - Supply Chain Management Simulation</a></strong>
