@@ -4,11 +4,6 @@ AOS.init({
   easing: 'ease-in-out',
   once: true
 });
-// Disable pinch-zoom on mobile
-const metaViewport = document.createElement('meta');
-metaViewport.name = 'viewport';
-metaViewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
-document.head.appendChild(metaViewport);
 // Language toggle functionality
 function toggleLang() {
   const jaContent = document.getElementById('ja');
@@ -26,15 +21,17 @@ function toggleLang() {
   }
 }
 
-// Smooth scroll for anchor links
+// Smooth scroll for anchor links — searches within the visible language section
+// to avoid duplicate IDs across #ja and #en causing scroll to wrong element
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const href = this.getAttribute('href');
+    const jaVisible = document.getElementById('ja').style.display !== 'none';
+    const activeSection = document.getElementById(jaVisible ? 'ja' : 'en');
+    const target = activeSection.querySelector(href) || document.querySelector(href);
     if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth'
-      });
+      target.scrollIntoView({ behavior: 'smooth' });
     }
   });
 });
