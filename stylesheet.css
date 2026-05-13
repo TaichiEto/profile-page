@@ -980,119 +980,197 @@ a[target="_blank"]:not(.social-icon):hover::after {
   font-size: 16px;
 }
 
-/* Responsive Design */
+/* ===========================
+   Responsive Design
+   =========================== */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .container {
     max-width: 100%;
     padding: 1.5rem;
   }
-  
+
   .profile-header {
     padding: 60px 32px;
     margin-bottom: 60px;
   }
-  
+
   .content-block {
     padding: 40px;
     margin-bottom: 32px;
   }
-  
+
   .education {
     padding: 40px;
     margin-bottom: 60px;
   }
 }
 
+/* Mobile (≤768px) */
 @media (max-width: 768px) {
   body {
     font-size: 16px;
   }
 
+  .container {
+    padding: 0.875rem;
+  }
+
+  /* Profile header */
+  .profile-header {
+    padding: 48px 24px;
+    margin-bottom: 40px;
+  }
+
   .profile-header h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     line-height: 1.2;
   }
 
-  .container {
-    padding: 1rem;
+  /* Navigation — horizontally scrollable, no wrapping */
+  .main-nav {
+    padding: 10px 16px;
+    margin-bottom: 24px;
+    top: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
 
-  .main-nav {
-    padding: 12px 16px;
-    margin-bottom: 32px;
+  .main-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .nav-list {
     gap: 6px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .nav-list li {
+    flex-shrink: 0;
   }
 
   .nav-list a {
     padding: 8px 14px;
     font-size: 14px;
+    white-space: nowrap;
   }
 
+  /* Content blocks */
   .content-block {
-    padding: 32px;
+    padding: 28px;
+    margin-bottom: 24px;
   }
 
   .content-block h2 {
-    font-size: 24px;
-  }
-
-  .skills-container {
-    gap: 32px;
-  }
-  
-  .skill-category-section {
-    padding: 32px;
-  }
-  
-  .skill-info {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    font-size: 22px;
+    margin-bottom: 24px;
     gap: 8px;
   }
 
-  .skill-name {
-    font-size: 16px;
+  /* Disable horizontal slide — prevents overflow on narrow screens */
+  .content-block:hover,
+  .skill-category-section:hover {
+    transform: translateY(-2px);
   }
 
+  .experience-item:hover,
+  .activity-item:hover,
+  .award-item:hover,
+  .other-item:hover,
+  .media-item:hover,
+  .qualification-item:hover {
+    transform: translateY(-2px);
+  }
+
+  .education-item:hover .education-content {
+    transform: none;
+  }
+
+  /* Social icons */
   .social-links {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
+    margin-top: 24px;
   }
 
   .social-icon {
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
     font-size: 18px;
   }
-  
+
+  /* Education timeline */
+  .education {
+    padding: 32px 24px;
+    margin-bottom: 40px;
+  }
+
+  .education-timeline::before {
+    left: 30px;
+  }
+
+  .education-item {
+    padding-left: 76px;
+    margin-bottom: 28px;
+  }
+
+  .education-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .education-content {
+    padding: 24px;
+  }
+
+  .education-content h3 {
+    font-size: 18px;
+  }
+
+  /* Research dot centered on 30px line */
+  .research-dot {
+    left: 20px;
+    top: 22px;
+  }
+
+  /* Skills */
+  .skills-container {
+    gap: 24px;
+  }
+
+  .skill-category-section {
+    padding: 24px;
+  }
+
+  .skill-name {
+    font-size: 15px;
+  }
+
+  /* List items */
   .experience-item,
   .activity-item,
   .award-item,
   .other-item,
-  .media-item {
-    padding: 24px;
-    margin-bottom: 16px;
-  }
-  
-  .education-timeline::before {
-    left: 32px;
+  .media-item,
+  .qualification-item {
+    padding: 20px;
+    margin-bottom: 14px;
   }
 
-  .education-item {
-    padding-left: 80px;
+  .experience-item strong,
+  .activity-item strong,
+  .award-item strong,
+  .other-item strong,
+  .qualification-item strong {
+    font-size: 16px;
   }
 
-  .education-icon {
-    width: 64px;
-    height: 64px;
-    font-size: 20px;
-  }
-
+  /* Projects */
   .project-content {
     flex-direction: column;
     gap: 16px;
@@ -1104,103 +1182,277 @@ a[target="_blank"]:not(.social-icon):hover::after {
     height: auto;
     align-self: center;
   }
+
+  /* About me */
+  #about-me .about-me-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+  #about-me .about-me-image {
+    flex-basis: auto;
+    width: 160px;
+    height: 160px;
+  }
+
+  #about-me .about-me-text h3 {
+    font-size: 18px;
+  }
+
+  #about-me .about-me-text h4 {
+    font-size: 16px;
+  }
 }
 
+/* Small mobile (≤480px) */
 @media (max-width: 480px) {
-  .profile-header {
-    padding: 40px 24px;
-  }
-  
-  .profile-header h1 {
-    font-size: 2rem;
-    margin-bottom: 16px;
-  }
-  
   .container {
     padding: 0.5rem;
   }
-  
-  .content-block {
-    padding: 24px;
-    margin-bottom: 24px;
+
+  /* Profile header */
+  .profile-header {
+    padding: 36px 20px;
+    margin-bottom: 28px;
   }
-  
-  .content-block h2 {
-    font-size: 20px;
-    margin-bottom: 24px;
+
+  .profile-header h1 {
+    font-size: 1.85rem;
+    margin-bottom: 12px;
   }
-  
+
   .social-links {
     gap: 8px;
+    margin-top: 16px;
   }
-  
+
   .social-icon {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
+    font-size: 15px;
+  }
+
+  /* Nav */
+  .main-nav {
+    top: 8px;
+    margin-bottom: 16px;
+  }
+
+  /* Content blocks */
+  .content-block {
+    padding: 20px;
+    margin-bottom: 16px;
+    border-radius: var(--border-radius);
+  }
+
+  .content-block h2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+
+  /* Education timeline — compact */
+  .education {
+    padding: 20px 10px;
+    margin-bottom: 24px;
+    border-radius: var(--border-radius);
+  }
+
+  .education-timeline::before {
+    left: 24px;
+  }
+
+  .education-item {
+    padding-left: 60px;
+    margin-bottom: 20px;
+  }
+
+  .education-icon {
+    width: 48px;
+    height: 48px;
     font-size: 16px;
-  }
-  
-  .cat-mascot {
-    width: 50px;
-    height: 50px;
-    bottom: 15px;
-    left: 15px;
+    border-width: 3px;
   }
 
-  .project-image {
-    max-width: 150px;
+  .education-content {
+    padding: 14px;
   }
 
-  /* Award image mobile styles */
+  .education-content h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .education-subtitle {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .education-period {
+    font-size: 13px;
+  }
+
+  .education-description {
+    font-size: 13px;
+  }
+
+  .education-timeline {
+    padding: 16px 0;
+  }
+
+  /* Research dot — centered on 24px line */
+  .research-dot {
+    left: 14px;
+    top: 20px;
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Research tags */
+  .research-tag {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  /* Long DOI/URLs must not overflow */
+  .research-pubs ul li {
+    font-size: 13px;
+  }
+
+  .research-pubs ul li a,
+  .related-publication a {
+    word-break: break-all;
+  }
+
+  /* Related publication */
+  .related-publication {
+    font-size: 13px;
+  }
+
+  /* List items */
+  .experience-item,
+  .activity-item,
+  .award-item,
+  .other-item,
+  .media-item,
+  .qualification-item {
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+
+  .experience-item strong,
+  .activity-item strong,
+  .award-item strong,
+  .other-item strong,
+  .qualification-item strong {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .experience-period,
+  .media-period {
+    font-size: 13px;
+  }
+
+  /* Awards */
   .award-content {
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
   }
 
   .award-image {
     width: 100%;
     height: auto;
     align-self: center;
-    max-width: 150px;
+    max-width: 140px;
     object-fit: contain;
   }
 
+  /* Projects */
+  .project-image {
+    max-width: 140px;
+  }
+
+  /* Skills */
+  .skills-container {
+    gap: 16px;
+  }
+
+  .skill-category-section {
+    padding: 18px;
+  }
+
+  .skill-category-title {
+    font-size: 17px;
+    margin-bottom: 16px;
+  }
+
+  .skill-name {
+    font-size: 14px;
+  }
+
+  /* Cat mascot */
+  .cat-mascot {
+    width: 48px;
+    height: 48px;
+    bottom: 14px;
+    left: 14px;
+  }
+
+  /* About me */
+  #about-me .about-me-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  #about-me .about-me-text h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  #about-me .about-me-text h4 {
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  #about-me .about-me-text p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+
+  .about-me-inline-image {
+    max-width: 100%;
+    width: 100%;
+    margin: 12px 0;
+  }
+
+  /* Award badge — stacked layout on small screens */
+  .award-badge {
+    display: block;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 6px 12px;
+    margin-top: 8px;
+  }
+
+  /* Mobile break hidden at 415–480px */
   .mobile-break {
     display: none;
   }
-
-  .education {
-    padding: 24px 16px;
-    margin-bottom: 40px;
-  }
-
-  .education-item {
-    padding-left: 72px;
-  }
-
-  .education-timeline {
-    padding: 24px 0;
-  }
-
-  .education-content {
-    padding: 20px;
-  }
 }
 
-/* Small Mobile Screen (414x816) */
+/* Tiny mobile (≤414px) */
 @media (max-width: 414px) {
+  /* Show inline line breaks for long school/org names */
   .mobile-break {
     display: inline;
   }
 
   .education-content h3 {
-    font-size: 20px;
-    line-height: 1.3;
-  }
-
-  .education-subtitle {
     font-size: 15px;
-    line-height: 1.4;
+    line-height: 1.35;
   }
 }
 
@@ -1585,30 +1837,32 @@ section {
   #about-me .about-me-container {
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 28px;
   }
 
   #about-me .about-me-image {
     flex-basis: auto;
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
+  }
+
+  section {
+    scroll-margin-top: 70px;
+  }
+
+  .about-me-inline-image {
+    max-width: 100%;
+    width: 100%;
+    margin: 14px 0;
   }
 }
 
 .about-me-inline-image {
-  max-width: 560px; /* Set max-width to approximately 560px */
+  max-width: 560px;
   height: auto;
   display: block;
-  margin: 20px 0; /* Left-align to match YouTube iframe */
+  margin: 20px 0;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-light);
-  object-fit: contain; /* Ensure the entire image is visible */
-}
-
-@media (max-width: 768px) {
-  .about-me-inline-image {
-    max-width: 100%;
-    width: 100%;
-    margin: 15px 0;
-  }
+  object-fit: contain;
 }
