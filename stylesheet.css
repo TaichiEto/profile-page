@@ -40,15 +40,20 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Noto Sans JP', system-ui, sans-serif;
-  line-height: 1.7;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic Medium', 'Yu Gothic', 'Meiryo', 'Noto Sans JP', sans-serif;
+  line-height: 1.75;
   color: var(--text-color);
   background: var(--background-color);
   min-height: 100vh;
   font-size: 16px;
+  font-feature-settings: 'palt';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+:lang(ja) {
+  font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic Medium', 'Yu Gothic', 'Meiryo', 'Noto Sans JP', sans-serif;
 }
 
 .container {
@@ -159,18 +164,10 @@ body {
   font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 }
 
-.profile-tagline {
-  color: var(--text-light);
-  font-size: 14px;
-  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
-  letter-spacing: 0.02em;
-  margin-bottom: 24px;
-}
-
 .social-links {
   display: flex;
   gap: 4px;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .social-icon {
@@ -776,10 +773,6 @@ section {
     font-size: 1.9rem;
   }
 
-  .profile-tagline {
-    font-size: 13px;
-  }
-
   .main-nav {
     padding: 8px 0;
     margin-bottom: 32px;
@@ -855,10 +848,6 @@ section {
 
   .profile-header h1 {
     font-size: 1.7rem;
-  }
-
-  .profile-tagline {
-    font-size: 12px;
   }
 
   .content-block h2 {
