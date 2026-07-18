@@ -233,6 +233,20 @@
         <h2><i class="fas fa-code"></i> 制作物</h2>
         <ul class="others-list">
           <li class="other-item">
+            <strong><a href="https://money.gakusei.trade/" target="_blank">Money Cloud｜money.gakusei.trade（支出可視化ツール）</a></strong>
+            <div class="project-tags">
+              <span class="research-tag">Go（1バイナリ）</span>
+              <span class="research-tag">Docker（scratchベース・数MB）</span>
+              <span class="research-tag">Vanilla JS / Canvas</span>
+              <span class="research-tag">localStorage</span>
+              <span class="research-tag">Cloudflare Tunnel</span>
+            </div>
+            <p>使えば使うほどアイコンがどんどん大きくなり、自分が何にお金を使っているのかを直感的に可視化してくれる家計可視化ツール。クレジットカードや銀行の明細（CSV/TSV/JSON/フリーテキスト）を放り込むと、文字コード（UTF-8/Shift_JIS/EUC-JP等）と形式を自動判定するGo製の多段パースパイプラインが解析し、ドット方眼のホワイトボード上に支出額と面積が比例するカラフルなキャンディ風アイコンとして並べます。アイコンをクリックすると明細カードが中心から放射状にバーストして展開。月別フィルタ・前月比バッジ・カテゴリ修正の学習・重複自動スキップ付きの追加読み込み・SNS共有用のPNG書き出し（外部ライブラリなしのCanvas直描き）も実装。明細データはサーバに保存せず、ブラウザ内（localStorage）のみで完結するプライバシー重視設計です。</p>
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/dkCZGsPcuaU" title="money.gakusei.trade Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </li>
+          <li class="other-item">
             <strong><a href="https://toshidai.trade/" target="_blank">toshidai.trade（非公式学生コミュニティサイト）</a></strong>
             <div class="project-tags">
               <span class="research-tag">Python / Flask (Blueprint)</span>
@@ -792,6 +806,20 @@
       <section id="projects" class="content-block" data-aos="fade-up">
         <h2><i class="fas fa-code"></i> Projects</h2>
         <ul class="others-list">
+          <li class="other-item">
+            <strong><a href="https://money.gakusei.trade/" target="_blank">Money Cloud｜money.gakusei.trade (Spending Visualization Tool)</a></strong>
+            <div class="project-tags">
+              <span class="research-tag">Go (single binary)</span>
+              <span class="research-tag">Docker (scratch-based, a few MB)</span>
+              <span class="research-tag">Vanilla JS / Canvas</span>
+              <span class="research-tag">localStorage</span>
+              <span class="research-tag">Cloudflare Tunnel</span>
+            </div>
+            <p>A spending visualization tool where category icons grow bigger the more you spend, making it intuitively visible what your money goes to. Drop in credit card or bank statements (CSV/TSV/JSON/free text) and a multi-stage parsing pipeline written in Go — with automatic character encoding (UTF-8/Shift_JIS/EUC-JP) and format detection, no paid AI — lays them out on a dotted whiteboard as colorful candy-style icons whose area is proportional to the amount spent. Clicking an icon bursts its transaction cards radially outward from the center. Also features monthly filters, month-over-month badges, learning from manual category corrections, incremental imports with automatic duplicate skipping, and PNG export for social sharing (drawn directly on Canvas with no external libraries). Statement data is never stored on the server — everything stays in the browser (localStorage) for a privacy-first design.</p>
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/dkCZGsPcuaU" title="money.gakusei.trade Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </li>
           <li class="other-item">
             <strong><a href="https://toshidai.trade/" target="_blank">toshidai.trade (Unofficial Student Community Site)</a></strong>
             <div class="project-tags">
