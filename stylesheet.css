@@ -1,19 +1,52 @@
 /* ============================================================
-   Brutalist zine design
-   paper white / 3px ink borders / hard offset shadows
-   accents: blue #2b49ff, marker yellow #ffe34d, grass #4caf3f
+   Brutalist zine design on top of the Digital Agency Design System (DADS)
+   https://design.digital.go.jp/dads/
+   Color, type scale, line-height, font family, link and focus styles
+   follow @digital-go-jp/design-tokens v2.1.0 (MIT).
    ============================================================ */
 
 :root {
-  --paper: #f5f5f0;
-  --card: #ffffff;
-  --ink: #111111;
-  --ink-soft: #45443f;
-  --ink-faint: #77756e;
-  --blue: #2b49ff;
-  --marker: #ffe34d;
-  --grass: #4caf3f;
+  /* DADS primitives */
+  --color-neutral-white: #ffffff;
+  --color-neutral-black: #000000;
+  --color-neutral-solid-gray-50: #f2f2f2;
+  --color-neutral-solid-gray-200: #cccccc;
+  --color-neutral-solid-gray-600: #666666;
+  --color-neutral-solid-gray-800: #333333;
+  --color-neutral-solid-gray-900: #1a1a1a;
+  --color-primitive-blue-900: #0017c1;
+  --color-primitive-blue-1000: #00118f;
+  --color-primitive-yellow-300: #ffd43d;
+  --color-primitive-green-600: #259d63;
+  --color-primitive-magenta-900: #8b008b;
+  --color-primitive-orange-800: #c74700;
+
+  --font-family-sans: 'Noto Sans JP', sans-serif;
+  --font-size-14: 0.875rem;
+  --font-size-16: 1rem;
+  --font-size-18: 1.125rem;
+  --font-size-20: 1.25rem;
+  --font-size-24: 1.5rem;
+  --font-size-64: 4rem;
+  --line-height-130: 1.3;
+  --line-height-150: 1.5;
+  --line-height-170: 1.7;
+
+  /* page roles */
+  --paper: var(--color-neutral-solid-gray-50);
+  --card: var(--color-neutral-white);
+  --ink: var(--color-neutral-solid-gray-900);
+  --ink-soft: var(--color-neutral-solid-gray-800);
+  --ink-faint: var(--color-neutral-solid-gray-600);
+  --blue: var(--color-primitive-blue-900);
+  --link: var(--color-primitive-blue-1000);
+  --marker: var(--color-primitive-yellow-300);
+  --grass: var(--color-primitive-green-600);
   --border-w: 3px;
+  --pixel: 'DotGothic16', var(--font-family-sans);
+
+  /* motion: hard, few-frame steps instead of smooth fades */
+  --stamp-steps: steps(3, end);
 }
 
 * {
@@ -28,29 +61,15 @@
 }
 
 body {
-  font-family: 'Zen Kaku Gothic New', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Yu Gothic Medium', 'Meiryo', sans-serif;
-  font-weight: 500;
-  line-height: 1.85;
+  font-family: var(--font-family-sans);
+  font-weight: 400;
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-170);
   color: var(--ink);
   background: var(--paper);
   min-height: 100vh;
-  font-size: 15.5px;
-  font-feature-settings: 'palt';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-.dot,
-.experience-period,
-.media-period,
-.education-period,
-.research-tag,
-.skill-category-title,
-.nav-list a,
-.lang-btn,
-.footer p {
-  font-family: 'DotGothic16', ui-monospace, 'SF Mono', Menlo, monospace;
 }
 
 .container {
@@ -59,15 +78,26 @@ body {
   padding: 2.5rem 1.5rem 4rem;
 }
 
+/* ---- links & focus (DADS) ---- */
+
 a {
-  color: var(--blue);
-  text-decoration: none;
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-a:not(.social-icon):not(.lang-btn):hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
+a:visited {
+  color: var(--color-primitive-magenta-900);
+}
+
+a:hover {
+  color: var(--link);
+  text-decoration-thickness: 3px;
+}
+
+a:active {
+  color: var(--color-primitive-orange-800);
+  text-decoration-thickness: 1px;
 }
 
 a[target="_blank"]:not(.social-icon)::after {
@@ -75,11 +105,22 @@ a[target="_blank"]:not(.social-icon)::after {
   font-size: 0.8em;
   margin-left: 3px;
   color: var(--ink-faint);
+  display: inline-block;
+  text-decoration: none;
 }
 
-:focus-visible {
-  outline: var(--border-w) solid var(--blue);
+a:focus-visible,
+button:focus-visible,
+iframe:focus-visible {
+  outline: 4px solid var(--color-neutral-black);
   outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--marker);
+  border-radius: 4px;
+}
+
+a:not(.social-icon):focus-visible {
+  background: var(--marker);
+  color: var(--link);
 }
 
 /* ---- language toggle ---- */
@@ -97,8 +138,10 @@ a[target="_blank"]:not(.social-icon)::after {
   border: var(--border-w) solid var(--ink);
   box-shadow: 4px 4px 0 var(--ink);
   padding: 8px 14px;
+  min-height: 44px;
   cursor: pointer;
-  font-size: 13px;
+  font-family: var(--pixel);
+  font-size: var(--font-size-14);
   letter-spacing: 0.06em;
 }
 
@@ -122,7 +165,7 @@ a[target="_blank"]:not(.social-icon)::after {
   background: var(--paper);
   border-top: var(--border-w) solid var(--ink);
   border-bottom: var(--border-w) solid var(--ink);
-  padding: 10px 0;
+  padding: 8px 0;
   position: sticky;
   top: 0;
   z-index: 90;
@@ -137,18 +180,22 @@ a[target="_blank"]:not(.social-icon)::after {
   flex-wrap: wrap;
 }
 
-.nav-list a {
-  display: inline-block;
-  padding: 3px 10px;
+.nav-list a,
+.nav-list a:visited {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 10px;
   color: var(--ink);
-  font-size: 13px;
+  font-size: var(--font-size-14);
+  font-weight: 700;
+  text-decoration: none;
   border: 2px solid transparent;
 }
 
 .nav-list a:hover {
   background: var(--marker);
   border-color: var(--ink);
-  text-decoration: none;
 }
 
 /* ---- hero ---- */
@@ -168,29 +215,29 @@ a[target="_blank"]:not(.social-icon)::after {
   top: -14px;
   left: 24px;
   background: var(--blue);
-  color: #fff;
-  font-family: 'DotGothic16', ui-monospace, monospace;
-  font-size: 12.5px;
+  color: var(--color-neutral-white);
+  font-family: var(--pixel);
+  font-size: var(--font-size-14);
   letter-spacing: 0.12em;
-  padding: 3px 12px;
+  padding: 2px 12px;
 }
 
 .profile-header h1 {
-  font-size: clamp(2.4rem, 7vw, 4rem);
-  color: var(--ink);
-  font-weight: 900;
+  font-size: clamp(2.5rem, 7vw, var(--font-size-64));
+  font-weight: 700;
   letter-spacing: 0.02em;
-  line-height: 1.2;
+  line-height: var(--line-height-130);
+  font-feature-settings: 'palt';
 }
 
 .profile-header h1 .name-en {
   display: block;
-  font-size: 14px;
+  font-family: var(--pixel);
+  font-size: var(--font-size-14);
   font-weight: 400;
   color: var(--ink-soft);
   letter-spacing: 0.35em;
   margin-top: 10px;
-  font-family: 'DotGothic16', ui-monospace, monospace;
 }
 
 .social-links {
@@ -200,11 +247,12 @@ a[target="_blank"]:not(.social-icon)::after {
   flex-wrap: wrap;
 }
 
-.social-icon {
-  font-size: 17px;
+.social-icon,
+.social-icon:visited {
+  font-size: 18px;
   color: var(--ink);
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -216,7 +264,6 @@ a[target="_blank"]:not(.social-icon)::after {
 
 .social-icon:hover {
   background: var(--marker);
-  color: var(--ink);
 }
 
 .social-icon:active {
@@ -256,31 +303,29 @@ a[target="_blank"]:not(.social-icon)::after {
 
 .content-block h2 {
   display: inline-block;
-  color: var(--ink);
   margin-bottom: 28px;
-  font-size: 21px;
-  font-weight: 900;
+  font-size: var(--font-size-24);
+  font-weight: 700;
   letter-spacing: 0.04em;
+  line-height: var(--line-height-150);
   border: var(--border-w) solid var(--ink);
   background: var(--card);
   box-shadow: 6px 6px 0 var(--blue);
   padding: 6px 18px 8px;
-  line-height: 1.5;
 }
 
 .content-block h2 small {
   display: block;
-  font-family: 'DotGothic16', ui-monospace, monospace;
-  font-size: 11px;
+  font-family: var(--pixel);
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.22em;
   color: var(--blue);
 }
 
-/* ---- education timeline ---- */
+/* ---- timelines (education & research) ---- */
 
 .education {
-  text-align: left;
   margin-bottom: 56px;
 }
 
@@ -297,6 +342,7 @@ a[target="_blank"]:not(.social-icon)::after {
   bottom: 12px;
   width: var(--border-w);
   background: var(--ink);
+  transform-origin: top;
 }
 
 .education-item {
@@ -329,61 +375,58 @@ a[target="_blank"]:not(.social-icon)::after {
 }
 
 .education-content h3 {
+  font-size: var(--font-size-18);
+  font-weight: 700;
+  line-height: var(--line-height-150);
+  margin-bottom: 2px;
+}
+
+.education-content h3 a,
+.education-content h3 a:visited {
   color: var(--ink);
-  margin-bottom: 2px;
-  font-size: 16px;
-  font-weight: 900;
 }
 
-.education-content h3 a {
-  color: inherit;
-}
-
-.education-subtitle {
-  color: var(--ink-soft);
-  font-size: 13.5px;
-  margin-bottom: 2px;
-}
-
-.education-period {
-  color: var(--blue);
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  margin-bottom: 2px;
-}
-
+.education-subtitle,
 .education-description {
   color: var(--ink-soft);
-  font-size: 13px;
+  font-size: var(--font-size-14);
 }
 
-/* ---- research entries (share the timeline layout) ---- */
+.education-period,
+.experience-period,
+.media-period {
+  color: var(--blue);
+  font-size: var(--font-size-14);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 4px;
+}
 
 .research-dot {
   position: absolute;
   left: 7px;
   top: 8px;
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   background: var(--marker);
   border: var(--border-w) solid var(--ink);
-  border-radius: 0;
 }
 
-.research-tags {
+.research-tags,
+.project-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 10px 0 12px;
+  margin: 8px 0 12px;
 }
 
 .research-tag {
   background: var(--paper);
   color: var(--ink);
-  font-size: 11px;
+  font-size: var(--font-size-14);
+  line-height: var(--line-height-150);
   padding: 1px 8px;
   border: 2px solid var(--ink);
-  letter-spacing: 0.02em;
 }
 
 .research-pubs {
@@ -395,12 +438,11 @@ a[target="_blank"]:not(.social-icon)::after {
 }
 
 .research-pubs p {
-  font-size: 11px;
+  font-family: var(--pixel);
+  font-size: var(--font-size-14);
   color: var(--ink-soft);
   margin-bottom: 8px;
-  font-weight: 400;
   letter-spacing: 0.18em;
-  font-family: 'DotGothic16', ui-monospace, monospace;
 }
 
 .research-pubs ul {
@@ -411,13 +453,8 @@ a[target="_blank"]:not(.social-icon)::after {
 }
 
 .research-pubs ul li {
-  font-size: 13px;
-  line-height: 1.7;
+  font-size: var(--font-size-14);
   color: var(--ink-soft);
-}
-
-.research-pubs ul li a {
-  color: var(--blue);
 }
 
 /* ---- list items as cards ---- */
@@ -458,21 +495,14 @@ a[target="_blank"]:not(.social-icon)::after {
 .award-item strong,
 .other-item strong,
 .qualification-item strong,
-.media-content strong {
+.media-content strong,
+.project-info strong {
   display: block;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   color: var(--ink);
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.experience-period,
-.media-period {
-  color: var(--blue);
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: var(--font-size-18);
+  line-height: var(--line-height-150);
 }
 
 .experience-item p,
@@ -480,14 +510,22 @@ a[target="_blank"]:not(.social-icon)::after {
 .award-item p,
 .other-item p,
 .qualification-item p,
-.media-description {
+.media-description,
+.project-info p {
   color: var(--ink-soft);
-  font-size: 13.5px;
-  line-height: 1.75;
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-170);
   margin-top: 4px;
 }
 
-/* ---- awards ---- */
+.experience-item p.experience-period,
+.activity-item p.experience-period,
+.media-content p.media-period {
+  color: var(--blue);
+  font-size: var(--font-size-14);
+}
+
+/* ---- awards & publications ---- */
 
 .award-content {
   display: flex;
@@ -507,10 +545,6 @@ a[target="_blank"]:not(.social-icon)::after {
   flex: 1;
 }
 
-.award-info strong {
-  margin: 0 0 4px 0;
-}
-
 .award-badge {
   display: inline-flex;
   align-items: center;
@@ -520,14 +554,8 @@ a[target="_blank"]:not(.social-icon)::after {
   background: var(--marker);
   color: var(--ink);
   border: 2px solid var(--ink);
-  font-weight: 500;
-  font-size: 11.5px;
-  font-family: 'DotGothic16', ui-monospace, monospace;
-}
-
-.award-badge i {
-  color: var(--ink);
-  font-size: 11px;
+  font-weight: 700;
+  font-size: var(--font-size-14);
 }
 
 .related-publication {
@@ -536,86 +564,15 @@ a[target="_blank"]:not(.social-icon)::after {
   background: var(--paper);
   border: 2px solid var(--ink);
   border-left: 8px solid var(--marker);
-  font-size: 13px;
-  line-height: 1.7;
-  color: var(--ink-soft);
+}
+
+.experience-item .related-publication {
+  font-size: var(--font-size-14);
 }
 
 .related-publication strong {
   display: inline;
-  color: var(--ink);
-  font-weight: 700;
   font-size: inherit;
-}
-
-/* ---- skills ---- */
-
-.skills-container {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-.skill-category-title {
-  color: var(--ink);
-  margin-bottom: 14px;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.skill-category-title::before {
-  content: '■ ';
-  color: var(--blue);
-  font-size: 10px;
-}
-
-.skill-items {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.skill-item {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.skill-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.skill-name {
-  font-weight: 700;
-  font-size: 13.5px;
-  color: var(--ink);
-  flex: 1;
-}
-
-.skill-bar {
-  width: 100%;
-  height: 16px;
-  background: var(--card);
-  border: 2.5px solid var(--ink);
-  overflow: hidden;
-}
-
-.skill-progress {
-  height: 100%;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--grass) 0,
-    var(--grass) 10px,
-    var(--card) 10px,
-    var(--card) 13px
-  );
-  width: 0%;
-  transition: width 0.8s steps(12);
 }
 
 /* ---- projects ---- */
@@ -640,30 +597,10 @@ a[target="_blank"]:not(.social-icon)::after {
   min-width: 0;
 }
 
-.project-info strong {
-  display: block;
-  margin-bottom: 4px;
-  color: var(--ink);
-  font-weight: 900;
-  font-size: 16px;
-}
-
-.project-info p {
-  color: var(--ink-soft);
-  line-height: 1.75;
-  font-size: 13.5px;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 8px 0 10px;
-}
-
 #innovation-2018 {
   color: var(--ink);
   font-weight: 700;
+  text-decoration: none;
   background: linear-gradient(transparent 62%, var(--marker) 62%);
 }
 
@@ -711,34 +648,35 @@ a[target="_blank"]:not(.social-icon)::after {
 }
 
 #about-me .about-me-text h3 {
-  font-size: 19px;
-  font-weight: 900;
-  color: var(--ink);
+  font-size: var(--font-size-20);
+  font-weight: 700;
   margin-bottom: 14px;
-  line-height: 1.65;
+  line-height: var(--line-height-150);
 }
 
 .hl {
-  background: linear-gradient(transparent 62%, var(--marker) 62%);
+  background-image: linear-gradient(transparent 60%, var(--marker) 60%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 #about-me .about-me-text h4 {
-  font-size: 15px;
-  font-weight: 900;
-  color: var(--ink);
+  font-size: var(--font-size-18);
+  font-weight: 700;
   margin-top: 26px;
   margin-bottom: 10px;
+  line-height: var(--line-height-150);
 }
 
 #about-me .about-me-text h4::before {
   content: '■ ';
   color: var(--blue);
-  font-size: 11px;
+  font-size: 0.7em;
 }
 
 #about-me .about-me-text p {
-  font-size: 14.5px;
-  line-height: 1.9;
   color: var(--ink-soft);
   margin-bottom: 14px;
 }
@@ -760,7 +698,6 @@ a[target="_blank"]:not(.social-icon)::after {
 /* ---- footer ---- */
 
 .footer {
-  text-align: left;
   padding: 20px 0 0;
   margin-top: 72px;
   border-top: var(--border-w) solid var(--ink);
@@ -768,14 +705,74 @@ a[target="_blank"]:not(.social-icon)::after {
 
 .footer p {
   color: var(--ink-soft);
-  font-size: 12px;
-  letter-spacing: 0.06em;
+  font-size: var(--font-size-14);
 }
-
-/* ---- misc ---- */
 
 section {
   scroll-margin-top: 72px;
+}
+
+/* ============================================================
+   Motion
+   Only active when script.js adds .motion to <html>, which it skips
+   for prefers-reduced-motion. Without JS everything renders static.
+   ============================================================ */
+
+/* stamp: headings and cards start pressed flat, then pop up with their shadow */
+.motion .content-block h2,
+.motion .experience-item,
+.motion .activity-item,
+.motion .award-item,
+.motion .other-item,
+.motion .media-item,
+.motion .qualification-item {
+  transition:
+    transform 0.18s var(--stamp-steps),
+    box-shadow 0.18s var(--stamp-steps);
+}
+
+.motion .content-block h2:not(.is-in) {
+  transform: translate(6px, 6px);
+  box-shadow: 0 0 0 var(--blue);
+}
+
+.motion .experience-item:not(.is-in),
+.motion .activity-item:not(.is-in),
+.motion .award-item:not(.is-in),
+.motion .other-item:not(.is-in),
+.motion .media-item:not(.is-in),
+.motion .qualification-item:not(.is-in) {
+  transform: translate(6px, 6px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+/* marker: drawn left to right */
+.motion .hl {
+  transition: background-size 0.6s steps(10, end) 0.15s;
+}
+
+.motion .hl:not(.is-in) {
+  background-size: 0% 100%;
+}
+
+/* timeline: the line follows scroll progress (--progress set by script.js) */
+.motion .education-timeline::before {
+  transform: scaleY(var(--progress, 0));
+}
+
+.motion .education-item:not(.is-reached) .education-icon,
+.motion .education-item:not(.is-reached) .research-dot {
+  background: var(--card);
+  border-color: var(--color-neutral-solid-gray-200);
+  color: var(--color-neutral-solid-gray-200);
+}
+
+.motion .education-icon,
+.motion .research-dot {
+  transition:
+    background-color 0.12s steps(2, end),
+    border-color 0.12s steps(2, end),
+    color 0.12s steps(2, end);
 }
 
 /* ===========================
@@ -783,10 +780,6 @@ section {
    =========================== */
 
 @media (max-width: 768px) {
-  body {
-    font-size: 15px;
-  }
-
   .container {
     padding: 1.5rem 1rem 3rem;
   }
@@ -798,7 +791,7 @@ section {
   }
 
   .main-nav {
-    padding: 8px 0;
+    padding: 4px 0;
     margin-bottom: 40px;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -828,7 +821,7 @@ section {
   }
 
   .content-block h2 {
-    font-size: 18px;
+    font-size: var(--font-size-20);
   }
 
   .experience-item,
@@ -872,21 +865,17 @@ section {
   }
 
   .education-item {
-    padding-left: 42px;
+    padding-left: 44px;
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    padding: 1.25rem 0.875rem 2.5rem;
+    padding: 1.25rem 1rem 2.5rem;
   }
 
   .profile-header {
     padding: 36px 18px 24px;
-  }
-
-  .content-block h2 {
-    font-size: 17px;
   }
 
   .award-content {
@@ -895,7 +884,6 @@ section {
   }
 
   .award-image {
-    max-width: 120px;
     width: 90px;
   }
 

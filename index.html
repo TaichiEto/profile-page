@@ -9,34 +9,39 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=DotGothic16&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=DotGothic16&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://www.youtube.com">
   <link rel="preconnect" href="https://i.ytimg.com">
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+      document.documentElement.classList.add('motion');
+    }
+  </script>
 </head>
 <body>
   <div class="container">
     <div class="lang-toggle">
-      <button onclick="toggleLang()" class="lang-btn">
-        <i class="fas fa-globe"></i> English
+      <button type="button" onclick="toggleLang()" class="lang-btn">
+        <i class="fas fa-globe" aria-hidden="true"></i> English
       </button>
     </div>
 
     <div id="ja" class="content-section">
-        <div class="profile-header" data-aos="fade-down">
+        <div class="profile-header">
         <span class="header-label">TAICHI ETO — PORTFOLIO</span>
         <h1 data-text="衛藤 泰地｜Taichi Eto">衛藤 泰地<span class="name-en">TAICHI ETO</span></h1>
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/taichieto/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.wantedly.com/id/taichi_eto" target="_blank" class="social-icon"><i class="fas fa-briefcase"></i></a>
-          <a href="https://x.com/iTachiTaichi" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-          <a href="https://note.com/itachitaichi" target="_blank" class="social-icon"><i class="fas fa-pen"></i></a>
-          <a href="https://instagram.com/taichi.jpg" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com/TaichiEto" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/taichieto/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+          <a href="https://www.wantedly.com/id/taichi_eto" target="_blank" class="social-icon" aria-label="Wantedly"><i class="fas fa-briefcase" aria-hidden="true"></i></a>
+          <a href="https://x.com/iTachiTaichi" target="_blank" class="social-icon" aria-label="X"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+          <a href="https://note.com/itachitaichi" target="_blank" class="social-icon" aria-label="note"><i class="fas fa-pen" aria-hidden="true"></i></a>
+          <a href="https://instagram.com/taichi.jpg" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://github.com/TaichiEto" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
         </div>
       </div>
 
-      <section id="about-me" class="content-block" data-aos="fade-up">
-        <h2>About Me<small>自己紹介</small></h2>
+      <section id="about-me" class="content-block">
+        <h2>About Me<small aria-hidden="true">自己紹介</small></h2>
         <div class="about-me-container">
           <img src="assets/imgs/character.JPG" alt="衛藤 泰地" class="about-me-image">
           <div class="about-me-text">
@@ -57,7 +62,7 @@
       </section>
 
       <!-- Navigation Header -->
-      <nav class="main-nav" data-aos="fade-down">
+      <nav class="main-nav">
         <ul class="nav-list">
           <li><a href="#certifications">資格</a></li>
           <li><a href="#research">研究内容</a></li>
@@ -69,7 +74,7 @@
         </ul>
       </nav>
 
-      <div class="education" data-aos="fade-up">
+      <div class="education">
         <div class="education-timeline">
           <div class="education-item">
             <div class="education-icon">
@@ -129,8 +134,8 @@
 
       <div class="px-divider" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 
-      <section id="certifications" class="content-block" data-aos="fade-up">
-        <h2>資格<small>CERTIFICATIONS</small></h2>
+      <section id="certifications" class="content-block">
+        <h2>資格<small aria-hidden="true">CERTIFICATIONS</small></h2>
         <ul class="qualifications-list">
           <li class="qualification-item">
             <strong>TOEIC L&R 800</strong>
@@ -143,8 +148,8 @@
         </ul>
       </section>
 
-      <section id="research" class="content-block" data-aos="fade-up">
-        <h2>研究内容<small>RESEARCH</small></h2>
+      <section id="research" class="content-block">
+        <h2>研究内容<small aria-hidden="true">RESEARCH</small></h2>
         <div class="education-timeline">
           <div class="education-item">
             <div class="research-dot"></div>
@@ -188,8 +193,8 @@
         </div>
       </section>
 
-      <section id="experience" class="content-block" data-aos="fade-up">
-        <h2>実務・インターン・アルバイト経験<small>EXPERIENCE</small></h2>
+      <section id="experience" class="content-block">
+        <h2>実務・インターン・アルバイト経験<small aria-hidden="true">EXPERIENCE</small></h2>
         <ul class="experience-list">
           <li class="experience-item">
             <strong><a href="https://www.cyberagent.co.jp/" target="_blank">株式会社サイバーエージェント</a>（株式会社AbemaTV｜MLエンジニアインターン）</strong>
@@ -254,8 +259,8 @@
         </ul>
       </section>
 
-      <section id="projects" class="content-block" data-aos="fade-up">
-        <h2>制作物<small>PROJECTS</small></h2>
+      <section id="projects" class="content-block">
+        <h2>制作物<small aria-hidden="true">PROJECTS</small></h2>
         <ul class="others-list">
           <li class="other-item">
             <strong><a href="https://money.gakusei.trade/" target="_blank">Money Cloud｜money.gakusei.trade（支出可視化ツール）</a></strong>
@@ -305,8 +310,8 @@
         </ul>
       </section>
 
-      <section id="activities" class="content-block" data-aos="fade-up">
-        <h2>学生団体活動<small>ACTIVITIES</small></h2>
+      <section id="activities" class="content-block">
+        <h2>学生団体活動<small aria-hidden="true">ACTIVITIES</small></h2>
         <ul class="activity-list">
           <li class="activity-item">
             <strong><a href="https://yokohama-fest.net/" target="_blank">学園祭実行委員会</a> 広報部（Web制作チームリーダー）</strong>
@@ -323,8 +328,8 @@
         </ul>
       </section>
 
-      <section id="awards" class="content-block" data-aos="fade-up">
-        <h2>受賞歴<small>AWARDS</small></h2>
+      <section id="awards" class="content-block">
+        <h2>受賞歴<small aria-hidden="true">AWARDS</small></h2>
         <ul class="awards-list">
           <li class="award-item">
             <div class="award-content">
@@ -364,8 +369,8 @@
         </ul>
       </section>
 
-      <section id="media" class="content-block" data-aos="fade-up">
-        <h2>メディア出演歴<small>MEDIA</small></h2>
+      <section id="media" class="content-block">
+        <h2>メディア出演歴<small aria-hidden="true">MEDIA</small></h2>
         <ul class="media-list">
           <li class="media-item">
             <div class="media-content">
@@ -386,21 +391,21 @@
     </div>
 
     <div id="en" class="content-section" lang="en" style="display:none;">
-      <div class="profile-header" data-aos="fade-down">
+      <div class="profile-header">
         <span class="header-label">TAICHI ETO — PORTFOLIO</span>
         <h1 data-text="Taichi Eto">Taichi Eto<span class="name-en">衛藤 泰地</span></h1>
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/taichieto/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.wantedly.com/id/taichi_eto" target="_blank" class="social-icon"><i class="fas fa-briefcase"></i></a>
-          <a href="https://x.com/iTachiTaichi" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-          <a href="https://note.com/itachitaichi" target="_blank" class="social-icon"><i class="fas fa-pen"></i></a>
-          <a href="https://instagram.com/taichi.jpg" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com/TaichiEto" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/taichieto/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+          <a href="https://www.wantedly.com/id/taichi_eto" target="_blank" class="social-icon" aria-label="Wantedly"><i class="fas fa-briefcase" aria-hidden="true"></i></a>
+          <a href="https://x.com/iTachiTaichi" target="_blank" class="social-icon" aria-label="X"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+          <a href="https://note.com/itachitaichi" target="_blank" class="social-icon" aria-label="note"><i class="fas fa-pen" aria-hidden="true"></i></a>
+          <a href="https://instagram.com/taichi.jpg" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://github.com/TaichiEto" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
         </div>
       </div>
 
-      <section id="about-me" class="content-block" data-aos="fade-up">
-        <h2>About Me<small>自己紹介</small></h2>
+      <section id="about-me" class="content-block">
+        <h2>About Me<small aria-hidden="true">自己紹介</small></h2>
         <div class="about-me-container">
           <img src="assets/imgs/character.JPG" alt="Taichi Eto" class="about-me-image">
           <div class="about-me-text">
@@ -421,7 +426,7 @@
       </section>
 
       <!-- Navigation Header -->
-      <nav class="main-nav" data-aos="fade-down">
+      <nav class="main-nav">
         <ul class="nav-list">
           <li><a href="#certifications">Certifications</a></li>
           <li><a href="#research">Research</a></li>
@@ -433,7 +438,7 @@
         </ul>
       </nav>
 
-      <div class="education" data-aos="fade-up">
+      <div class="education">
         <div class="education-timeline">
           <div class="education-item">
             <div class="education-icon">
@@ -493,8 +498,8 @@
 
       <div class="px-divider" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 
-      <section id="certifications" class="content-block" data-aos="fade-up">
-        <h2>Certifications<small>資格</small></h2>
+      <section id="certifications" class="content-block">
+        <h2>Certifications<small aria-hidden="true">資格</small></h2>
         <ul class="qualifications-list">
           <li class="qualification-item">
             <strong>TOEIC L&R 800</strong>
@@ -507,8 +512,8 @@
         </ul>
       </section>
 
-      <section id="research" class="content-block" data-aos="fade-up">
-        <h2>Research<small>研究内容</small></h2>
+      <section id="research" class="content-block">
+        <h2>Research<small aria-hidden="true">研究内容</small></h2>
         <div class="education-timeline">
           <div class="education-item">
             <div class="research-dot"></div>
@@ -552,8 +557,8 @@
         </div>
       </section>
 
-      <section id="experience" class="content-block" data-aos="fade-up">
-        <h2>Work, Internship & Part-time Experience<small>実務経験</small></h2>
+      <section id="experience" class="content-block">
+        <h2>Work, Internship & Part-time Experience<small aria-hidden="true">実務経験</small></h2>
         <ul class="experience-list">
           <li class="experience-item">
             <strong><a href="https://www.cyberagent.co.jp/" target="_blank">CyberAgent, Inc.</a> (AbemaTV, Inc. | ML Engineer Intern)</strong>
@@ -618,8 +623,8 @@
         </ul>
       </section>
 
-      <section id="projects" class="content-block" data-aos="fade-up">
-        <h2>Projects<small>制作物</small></h2>
+      <section id="projects" class="content-block">
+        <h2>Projects<small aria-hidden="true">制作物</small></h2>
         <ul class="others-list">
           <li class="other-item">
             <strong><a href="https://money.gakusei.trade/" target="_blank">Money Cloud｜money.gakusei.trade (Spending Visualization Tool)</a></strong>
@@ -669,8 +674,8 @@
         </ul>
       </section>
 
-      <section id="activities" class="content-block" data-aos="fade-up">
-        <h2>Student Activities<small>学生団体活動</small></h2>
+      <section id="activities" class="content-block">
+        <h2>Student Activities<small aria-hidden="true">学生団体活動</small></h2>
         <ul class="activity-list">
           <li class="activity-item">
             <strong><a href="https://yokohama-fest.net/" target="_blank">University Festival Executive Committee</a> PR Department (Web Production Team Leader)</strong>
@@ -687,8 +692,8 @@
         </ul>
       </section>
 
-      <section id="awards" class="content-block" data-aos="fade-up">
-        <h2>Awards<small>受賞歴</small></h2>
+      <section id="awards" class="content-block">
+        <h2>Awards<small aria-hidden="true">受賞歴</small></h2>
         <ul class="awards-list">
           <li class="award-item">
             <div class="award-content">
@@ -728,8 +733,8 @@
         </ul>
       </section>
 
-      <section id="media" class="content-block" data-aos="fade-up">
-        <h2>Media Appearances<small>メディア出演歴</small></h2>
+      <section id="media" class="content-block">
+        <h2>Media Appearances<small aria-hidden="true">メディア出演歴</small></h2>
         <ul class="media-list">
           <li class="media-item">
             <div class="media-content">
